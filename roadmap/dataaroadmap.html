@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Data Analytics Career Roadmap 2026 | FreeCourseHub</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Step-by-step 2026 Data Analytics roadmap. Learn Excel, SQL, Python, Power BI, Statistics, and AI tools with curated free courses and real-world project matrices.">
+    <meta name="keywords" content="data analytics roadmap 2026, learn data analyst free, excel to power bi, sql roadmap, python for data analytics, freecoursehub roadmaps">
+    <meta name="author" content="Munendra Singh">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FreeCourseHub">
+    <meta property="og:title" content="Data Analytics Career Roadmap 2026 | FreeCourseHub">
+    <meta property="og:description" content="Master Data Analytics from scratch with this free interactive curriculum, milestone checklist, and portfolio project ideas.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/munendra5singh/FreeCourseHub/main/preview.png">
+
+    <!-- Stylesheets & Icons -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <style>
+        /* ==========================================================================
+           1. CORE DESIGN TOKENS & RESET
+           ========================================================================== */
+        :root {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-muted: #64748b;
+            --brand: #4f46e5;
+            --brand-hover: #3730a3;
+            --border: #e2e8f0;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --radius-lg: 20px;
+            --radius-sm: 8px;
+            --radius-full: 9999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            padding-top: 70px;
+            transition: background 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        /* ==========================================================================
+           2. UNIVERSAL NAVBAR (Desktop Standard)
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 70px;
+            background: var(--bg-card);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--brand);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 15px;
+            position: relative;
+            padding-bottom: 6px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--brand);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #4f46e5, #06b6d4);
+            border-radius: var(--radius-full);
+        }
+
+        .nav-right-tools {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            background: var(--brand);
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .nav-btn:hover {
+            background: var(--brand-hover);
+            transform: translateY(-1px);
+        }
+
+        .theme-toggle-btn {
+            background: #f1f5f9;
+            border: 1px solid var(--border);
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        /* ==========================================================================
+           3. HERO CARD SECTION (Permanent Blue Gradient)
+           ========================================================================== */
+        .hero-container {
+            width: 88%;
+            max-width: 1180px;
+            margin: 25px auto 20px;
+        }
+
+        .hero-card {
+            background: linear-gradient(135deg, #4338ca 0%, #3b82f6 50%, #06b6d4 100%) !important;
+            border-radius: 28px;
+            padding: 40px 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            color: #ffffff !important;
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-left-content {
+            flex: 1.2;
+            max-width: 580px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-left-content h1 {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            color: #ffffff !important;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-left-content p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95) !important;
+            margin-bottom: 20px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-pill-btn {
+            background: #ffffff;
+            color: #4338ca;
+            padding: 12px 28px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-block;
+        }
+
+        .hero-pill-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+        }
+
+        .hero-right-img-box {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .hero-right-img-box img {
+            width: 100%;
+            max-width: 380px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(72, 6, 225, 0.25);
+        }
+
+        /* ==========================================================================
+           4. PROGRESS & SEARCH CONTROLS
+           ========================================================================== */
+        .roadmap-controls-container {
+            width: 88%;
+            max-width: 1180px;
+            margin: 20px auto 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .control-box {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 20px 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .search-inner {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-inner i {
+            position: absolute;
+            left: 18px;
+            color: #64748b;
+            font-size: 16px;
+            pointer-events: none;
+        }
+
+        .search-inner input {
+            width: 100%;
+            padding: 13px 20px 13px 48px;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius-full);
+            font-size: 14px;
+            background: var(--bg-main);
+            color: var(--text-primary);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-inner input:focus {
+            border-color: var(--brand);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .progress-track-bg {
+            height: 10px;
+            background: var(--border);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4f46e5, #10b981);
+            border-radius: var(--radius-full);
+            transition: width 0.3s ease;
+        }
+
+        /* Order Track Chips */
+        .order-section {
+            width: 88%;
+            max-width: 1180px;
+            margin: 0 auto 30px;
+        }
+
+        .order-track {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 10px 4px;
+            scrollbar-width: thin;
+        }
+
+        .order-step {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .order-arrow {
+            color: var(--brand);
+            font-weight: 800;
+        }
+
+        /* ==========================================================================
+           5. TIMELINE & CURRICULUM MODULES (Bento Modules)
+           ========================================================================== */
+        .roadmap-section {
+            width: 88%;
+            max-width: 1180px;
+            margin: auto;
+            padding-bottom: 40px;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .module-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .module-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .module-card.col-span-full {
+            grid-column: 1 / -1;
+        }
+
+        .card-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .step-tag {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--brand);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .duration-badge {
+            background: #eef2ff;
+            color: var(--brand);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: var(--radius-full);
+        }
+
+        .module-card h3 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+        }
+
+        .topic-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .topic-item label {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+            user-select: none;
+        }
+
+        .topic-item input[type="checkbox"] {
+            margin-top: 2px;
+            width: 16px;
+            height: 16px;
+            accent-color: var(--brand);
+            cursor: pointer;
+        }
+
+        .topic-item input[type="checkbox"]:checked + span {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+
+        /* Project Matrix Mini Grid */
+        .project-matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .project-mini-box {
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+        }
+
+        .project-mini-box h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .project-mini-box p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Back to top floating button */
+        .back-to-top {
+            position: fixed;
+            bottom: 75px;
+            right: 20px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--brand);
+            color: #ffffff;
+            border: none;
+            font-size: 18px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .back-to-top.visible {
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            transform: scale(1.1);
+        }
+
+        /* ==========================================================================
+           6. BALANCED FULL WIDTH FOOTER
+           ========================================================================== */
+        .site-footer {
+            width: 100% !important;
+            background: #090e1a !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 60px;
+            padding: 50px 0 25px 0;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        .footer-inner {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-main-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) !important;
+            gap: 30px !important;
+            align-items: start;
+            margin-bottom: 35px;
+        }
+
+        .footer-brand-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-brand-col .footer-logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand-col .footer-logo i {
+            color: #6366f1;
+            font-size: 24px;
+        }
+
+        .footer-brand-col p {
+            color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.5;
+            max-width: 100%;
+        }
+
+        .footer-col-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .footer-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-list a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-list a:hover {
+            color: #818cf8;
+        }
+
+        .footer-social-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 42px) !important;
+            gap: 10px !important;
+        }
+
+        .social-pill {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition: transform 0.2s, background 0.2s, color 0.2s;
+        }
+
+        .social-pill:hover {
+            background: #4f46e5;
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        .social-pill.wa:hover { background: #25D366; }
+        .social-pill.ig:hover { background: #E1306C; }
+        .social-pill.yt:hover { background: #FF0000; }
+        .social-pill.gh:hover { background: #333333; }
+        .social-pill.tw:hover { background: #1DA1F2; }
+        .social-pill.li:hover { background: #0077B5; }
+
+        .footer-bottom-disclaimer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .footer-legal-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer-legal-links a:hover {
+            color: #ffffff;
+        }
+
+        .mobile-bottom-nav,
+        .mobile-menu-overlay,
+        .mobile-menu-drawer {
+            display: none;
+        }
+
+        /* ==========================================================================
+           7. UNIVERSAL DARK MODE (Crisp White Borders & Locked Hero)
+           ========================================================================== */
+        body.dark-mode, body.dark-theme {
+            --bg-main: #000000;
+            --bg-card: #0a0f1d;
+            --text-primary: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #ffffff;
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        body.dark-mode .navbar, body.dark-theme .navbar {
+            background: #090d18;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Card Locked Blue with Crisp White Border */
+        body.dark-mode .hero-card, body.dark-theme .hero-card {
+            background: linear-gradient(135deg, #4338ca 0%, #3b82f6 50%, #06b6d4 100%) !important;
+            border: 1.5px solid #ffffff !important;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3) !important;
+        }
+
+        /* Cards in Dark Mode */
+        body.dark-mode .control-box, body.dark-theme .control-box,
+        body.dark-mode .order-step, body.dark-theme .order-step,
+        body.dark-mode .module-card, body.dark-theme .module-card,
+        body.dark-mode .project-mini-box, body.dark-theme .project-mini-box {
+            background: #0a0f1d !important;
+            border: 1.5px solid #ffffff !important;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05) !important;
+        }
+
+        body.dark-mode .module-card:hover, body.dark-theme .module-card:hover {
+            border-color: #ffffff !important;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15) !important;
+        }
+
+        body.dark-mode .search-inner input, body.dark-theme .search-inner input {
+            background: #141e33 !important;
+            border-color: #ffffff !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .duration-badge, body.dark-theme .duration-badge {
+            background: #1e293b;
+            color: #818cf8;
+        }
+
+        body.dark-mode .theme-toggle-btn, body.dark-theme .theme-toggle-btn {
+            background: #182238;
+            border: 1px solid #ffffff;
+            color: #f59e0b;
+        }
+
+        body.dark-mode .site-footer, body.dark-theme .site-footer {
+            border-top: 1.5px solid #ffffff !important;
+        }
+
+        body.dark-mode .social-pill, body.dark-theme .social-pill {
+            border: 1.5px solid #ffffff !important;
+        }
+
+        /* ==========================================================================
+           8. MOBILE VIEW: 2 CARDS PER ROW & YOUTUBE BOTTOM NAV (<=768px)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
+            body {
+                padding-top: 55px !important;
+                padding-bottom: 75px !important;
+            }
+
+            .navbar {
+                min-height: 55px !important;
+                height: 55px !important;
+                padding: 0 14px !important;
+            }
+
+            .logo { font-size: 18px; }
+            .nav-links, .nav-btn { display: none !important; }
+
+            .hero-container {
+                width: 94%;
+                margin: 15px auto 10px;
+            }
+
+            /* Image on Top for Mobile */
+            .hero-card {
+                padding: 20px 16px;
+                flex-direction: column-reverse !important;
+                align-items: center;
+                text-align: center;
+                gap: 16px;
+                border-radius: 22px;
+            }
+
+            .hero-left-content {
+                max-width: 100%;
+            }
+
+            .hero-left-content h1 {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            .hero-left-content p {
+                font-size: 13px;
+                margin-bottom: 14px;
+            }
+
+            .hero-actions {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .hero-pill-btn {
+                width: 100%;
+                padding: 11px 16px;
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .hero-right-img-box {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .hero-right-img-box img {
+                width: 100%;
+                max-width: 100%;
+                height: 165px;
+                border-radius: 16px;
+                object-fit: cover;
+            }
+
+            .roadmap-controls-container, .order-section, .roadmap-section {
+                width: 94%;
+            }
+
+            .roadmap-controls-container {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+
+            .control-box {
+                padding: 14px 16px;
+            }
+
+            /* 🌟 MOBILE GRID: 1 ROW ME 2 COMPACT MODULE CARDS 🌟 */
+            .roadmap-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+            }
+
+            .module-card {
+                padding: 14px 10px !important;
+                border-radius: 12px !important;
+            }
+
+            .module-card.col-span-full {
+                grid-column: 1 / -1 !important;
+            }
+
+            .card-header-flex {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                margin-bottom: 8px;
+            }
+
+            .step-tag {
+                font-size: 10px;
+            }
+
+            .duration-badge {
+                font-size: 9px;
+                padding: 2px 6px;
+            }
+
+            .module-card h3 {
+                font-size: 13px !important;
+                margin-bottom: 8px;
+                line-height: 1.3;
+            }
+
+            .topic-list {
+                gap: 6px;
+            }
+
+            .topic-item label {
+                font-size: 11px;
+                gap: 6px;
+            }
+
+            .topic-item input[type="checkbox"] {
+                width: 13px;
+                height: 13px;
+            }
+
+            .project-matrix-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .project-mini-box {
+                padding: 10px;
+            }
+
+            /* Footer Mobile */
+            .footer-main-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+                text-align: center;
+            }
+
+            .footer-brand-col {
+                align-items: center;
+            }
+
+            .footer-social-col {
+                align-items: center;
+            }
+
+            .footer-social-grid {
+                justify-content: center;
+                grid-template-columns: repeat(6, 42px) !important;
+            }
+
+            /* --- YOUTUBE BOTTOM NAVIGATION --- */
+            .mobile-bottom-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 56px;
+                background: rgba(255, 255, 255, 0.96);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-top: 1px solid var(--border);
+                justify-content: space-around;
+                align-items: center;
+                z-index: 9999;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+
+            .mobile-bottom-nav.nav-hidden {
+                transform: translateY(100%);
+            }
+
+            .mobile-nav-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                height: 100%;
+                color: var(--text-muted);
+                font-size: 20px;
+                text-decoration: none;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .mobile-nav-item.active {
+                color: var(--brand);
+            }
+
+            body.dark-mode .mobile-bottom-nav,
+            body.dark-theme .mobile-bottom-nav {
+                background: rgba(9, 13, 24, 0.96);
+                border-top-color: rgba(255, 255, 255, 0.2);
+            }
+
+            body.dark-mode .mobile-nav-item.active,
+            body.dark-theme .mobile-nav-item.active {
+                color: #818cf8;
+            }
+
+            /* --- MOBILE SLIDE DRAWER --- */
+            .mobile-menu-overlay {
+                display: block;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(4px);
+                z-index: 10000;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s, visibility 0.3s;
+            }
+
+            .mobile-menu-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .mobile-menu-drawer {
+                display: block;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: var(--bg-card);
+                border-radius: 20px 20px 0 0;
+                padding: 14px 16px 28px;
+                z-index: 10001;
+                transform: translateY(100%);
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0 -10px 30px rgba(0,0,0,0.15);
+            }
+
+            .mobile-menu-drawer.active {
+                transform: translateY(0);
+            }
+
+            .drawer-handle {
+                width: 32px;
+                height: 4px;
+                background: #cbd5e1;
+                border-radius: var(--radius-full);
+                margin: 0 auto 14px;
+            }
+
+            .drawer-links {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .drawer-links li a,
+            .drawer-links li button {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                width: 100%;
+                padding: 12px 14px;
+                border-radius: var(--radius-sm);
+                text-decoration: none;
+                color: var(--text-primary);
+                font-size: 14px;
+                font-weight: 600;
+                background: #f8fafc;
+                border: 1px solid var(--border);
+                cursor: pointer;
+            }
+
+            .drawer-links li a i,
+            .drawer-links li button i {
+                font-size: 16px;
+                color: var(--brand);
+                width: 20px;
+                text-align: center;
+            }
+
+            body.dark-mode .drawer-links li a,
+            body.dark-mode .drawer-links li button,
+            body.dark-theme .drawer-links li a,
+            body.dark-theme .drawer-links li button {
+                background: #141e33;
+                border-color: #ffffff;
+                color: #f1f5f9;
+            }
+        }
+    </style>
+</head>
+<body class="roadmap-page">
+
+    <!-- Top Navigation (Desktop standard, Mobile compact) -->
+    <header style="background: none; padding: 0;">
+        <nav class="navbar" id="topNavbar">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> FreeCourseHub
+            </a>
+
+            <!-- Desktop Links -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../sections/Courses.html">Courses</a></li>
+                <li><a href="../sections/Categories.html">Categories</a></li>
+                <li><a href="../sections/blog.html" class="active">Blog & Roadmaps</a></li>
+                <li><a href="../sections/contact.html">Contact</a></li>
+                <li><a href="../sections/favorites.html">Favorites ❤️</a></li>
+            </ul>
+
+            <div class="nav-right-tools">
+                <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="../sections/Categories.html?category=data-analytics" class="nav-btn">Start Learning</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Modern Hero Section (Dual-Column Card Frame) -->
+    <section class="hero-container">
+        <div class="hero-card">
+            <div class="hero-left-content">
+                <span class="hero-badge">2026 Structured Blueprint</span>
+                <h1>Become a Professional Data Analyst</h1>
+                <p>Learn every essential skill required to safely navigate modern analytics landscapes and land high-demand technical data roles from scratch.</p>
+                <div class="hero-actions">
+                    <a href="#roadmap" class="hero-pill-btn">Explore Roadmap</a>
+                    <a href="../sections/Categories.html?category=data-analytics" class="hero-pill-btn" style="background: rgba(255,255,255,0.2); color:#ffffff; border:1px solid #ffffff;">Start Free Track</a>
+                </div>
+            </div>
+            <div class="hero-right-img-box">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" alt="Data Analytics Dashboard Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Track Chips -->
+    <section class="order-section">
+        <div class="order-track">
+            <div class="order-step"><span>1️⃣</span> Excel</div>
+            <div class="order-arrow">→</div>
+            <div class="order-step"><span>2️⃣</span> SQL</div>
+            <div class="order-arrow">→</div>
+            <div class="order-step"><span>3️⃣</span> Statistics</div>
+            <div class="order-arrow">→</div>
+            <div class="order-step"><span>4️⃣</span> Power BI</div>
+            <div class="order-arrow">→</div>
+            <div class="order-step"><span>5️⃣</span> Python</div>
+            <div class="order-arrow">→</div>
+            <div class="order-step"><span>6️⃣</span> Git & GitHub</div>
+            <div class="order-arrow">→</div>
+            <div class="order-step"><span>7️⃣</span> Projects</div>
+            <div class="order-arrow">→</div>
+            <div class="order-step"><span>8️⃣</span> AI Tools</div>
+        </div>
+    </section>
+
+    <!-- Search & Dynamic Progress Controller -->
+    <section class="roadmap-controls-container">
+        <div class="control-box">
+            <div class="search-inner">
+                <i class="fas fa-search"></i>
+                <input type="text" id="moduleSearch" placeholder="Search roadmap modules or specific tools...">
+            </div>
+        </div>
+        <div class="control-box">
+            <div class="progress-header">
+                <span>Curriculum Progress</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-track-bg">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Roadmap Modules Grid -->
+    <section class="roadmap-section" id="roadmap">
+        <div class="roadmap-grid">
+
+            <!-- Step 1: Excel -->
+            <div class="module-card">
+                <div class="card-header-flex">
+                    <span class="step-tag">Step 01</span>
+                    <span class="duration-badge">2–4 Weeks</span>
+                </div>
+                <h3>Microsoft Excel</h3>
+                <ul class="topic-list">
+                    <li class="topic-item"><label><input type="checkbox"> <span>Excel Basics & Fundamentals</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Core Formulas (SUM, AVERAGE, IF)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Data Lookup (XLOOKUP, VLOOKUP)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>INDEX + MATCH Matrices</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Conditional Operators (COUNTIF, SUMIF)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Pivot Tables & Pivot Charts</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Power Query ETL Automation</span></label></li>
+                </ul>
+            </div>
+
+            <!-- Step 2: SQL -->
+            <div class="module-card">
+                <div class="card-header-flex">
+                    <span class="step-tag">Step 02</span>
+                    <span class="duration-badge">3–4 Weeks</span>
+                </div>
+                <h3>SQL (Database Queries)</h3>
+                <ul class="topic-list">
+                    <li class="topic-item"><label><input type="checkbox"> <span>Relational Database Basics</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Data Selection (SELECT, WHERE, ORDER BY)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Aggregation (GROUP BY, HAVING)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Joins (INNER, LEFT, RIGHT JOIN)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>CTEs (Common Table Expressions)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Window Functions (RANK, ROW_NUMBER)</span></label></li>
+                </ul>
+            </div>
+
+            <!-- Step 3: Python -->
+            <div class="module-card">
+                <div class="card-header-flex">
+                    <span class="step-tag">Step 03</span>
+                    <span class="duration-badge">5–6 Weeks</span>
+                </div>
+                <h3>Python for Analytics</h3>
+                <ul class="topic-list">
+                    <li class="topic-item"><label><input type="checkbox"> <span>Python Syntax, Loops & Functions</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>NumPy Array Vectorization</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Pandas DataFrames Manipulation</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Data Cleaning & Null Imputation</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Matplotlib & Seaborn Visualizations</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Jupyter Notebook Documentation</span></label></li>
+                </ul>
+            </div>
+
+            <!-- Step 4: Statistics -->
+            <div class="module-card">
+                <div class="card-header-flex">
+                    <span class="step-tag">Step 04</span>
+                    <span class="duration-badge">2 Weeks</span>
+                </div>
+                <h3>Mathematical Statistics</h3>
+                <ul class="topic-list">
+                    <li class="topic-item"><label><input type="checkbox"> <span>Central Tendency (Mean, Median, Mode)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Dispersion (Variance, Standard Deviation)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Correlation Coefficients & Covariance</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Normal Distribution & Z-Scores</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Hypothesis Testing (P-Values, T-Tests)</span></label></li>
+                </ul>
+            </div>
+
+            <!-- Step 5: Power BI -->
+            <div class="module-card">
+                <div class="card-header-flex">
+                    <span class="step-tag">Step 05</span>
+                    <span class="duration-badge">3 Weeks</span>
+                </div>
+                <h3>Power BI & Visualization</h3>
+                <ul class="topic-list">
+                    <li class="topic-item"><label><input type="checkbox"> <span>Multi-source Data Ingestion</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Star Schema Relationship Modeling</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>DAX Measures & Calculated Columns</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Interactive Charts & KPI Cards</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Drill-down Filters & Bookmarks</span></label></li>
+                </ul>
+            </div>
+
+            <!-- Step 6: Git & AI Tools -->
+            <div class="module-card">
+                <div class="card-header-flex">
+                    <span class="step-tag">Step 06</span>
+                    <span class="duration-badge">2 Weeks</span>
+                </div>
+                <h3>Git & AI Acceleration</h3>
+                <ul class="topic-list">
+                    <li class="topic-item"><label><input type="checkbox"> <span>Git Repositories (Commit, Push, Branch)</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>GitHub Portfolio Architecture</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>Prompt Engineering for SQL Queries</span></label></li>
+                    <li class="topic-item"><label><input type="checkbox"> <span>AI-Driven Excel Formula Syntax Tools</span></label></li>
+                </ul>
+            </div>
+
+            <!-- Step 7: Portfolio Matrix (Full Width) -->
+            <div class="module-card col-span-full" id="projects">
+                <div class="card-header-flex">
+                    <span class="step-tag">Step 07</span>
+                    <span class="duration-badge">Target: 6+ Projects</span>
+                </div>
+                <h3>Portfolio Projects Matrix</h3>
+                <div class="project-matrix-grid">
+                    <div class="project-mini-box">
+                        <label class="topic-item">
+                            <input type="checkbox">
+                            <span>
+                                <h4>Sales Performance Dashboard</h4>
+                                <p>Revenue optimization tracking via Power BI.</p>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="project-mini-box">
+                        <label class="topic-item">
+                            <input type="checkbox">
+                            <span>
+                                <h4>HR Capital Analytics</h4>
+                                <p>Attrition models and demographic metrics.</p>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="project-mini-box">
+                        <label class="topic-item">
+                            <input type="checkbox">
+                            <span>
+                                <h4>E-Commerce Market Basket</h4>
+                                <p>Transaction cohorts analyzed using Python Pandas.</p>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="project-mini-box">
+                        <label class="topic-item">
+                            <input type="checkbox">
+                            <span>
+                                <h4>Customer Churn Diagnostics</h4>
+                                <p>Predictive behaviors using SQL subqueries.</p>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="project-mini-box">
+                        <label class="topic-item">
+                            <input type="checkbox">
+                            <span>
+                                <h4>Financial Ledger Tracker</h4>
+                                <p>Expense margin calculations via advanced Excel.</p>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="project-mini-box">
+                        <label class="topic-item">
+                            <input type="checkbox">
+                            <span>
+                                <h4>Hospital Resource Allocation</h4>
+                                <p>Patient flow metrics & bed occupancy layout.</p>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Balanced Full Width Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-main-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-brand-col">
+                    <a href="../index.html" class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i> FreeCourseHub
+                    </a>
+                    <p>Your destination for finding the best verified free online courses and learning paths.</p>
+                </div>
+
+                <!-- Column 2: Explore -->
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Explore</h4>
+                    <ul class="footer-list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../sections/Courses.html">Courses</a></li>
+                        <li><a href="../sections/Categories.html">Categories</a></li>
+                        <li><a href="../sections/blog.html">Blog Articles</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Support -->
+                <div class="footer-nav-col">
+                    <h4 class="footer-col-title">Support</h4>
+                    <ul class="footer-list">
+                        <li><a href="../sections/contact.html">Contact Us</a></li>
+                        <li><a href="../sections/about.html">About Us</a></li>
+                        <li><a href="../sections/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="../sections/favorites.html">My Favorites ❤️</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Connect With Us -->
+                <div class="footer-social-col">
+                    <h4 class="footer-col-title">Connect With Us</h4>
+<div class="footer-social-grid">
+    <a class="social-pill yt" href="https://www.youtube.com/@munendra-tcm" rel="noopener noreferrer" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+    <a class="social-pill gh" href="https://github.com/munendra5singh" rel="noopener noreferrer" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a class="social-pill ig" href="https://www.instagram.com/munendra_tcm?igsh=c3F6aDUxYTVlNmhz" rel="noopener noreferrer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a class="social-pill wa" href="https://wa.me/919105523282" rel="noopener noreferrer" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a class="social-pill fb" href="https://www.facebook.com/share/1E47B3eucZ/" rel="noopener noreferrer" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a class="social-pill li" href="https://www.linkedin.com/in/munendra-singh-7706443b3/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+                </div>
+            </div>
+
+            <!-- Disclaimer & Copyright -->
+            <div class="footer-bottom-disclaimer">
+                <p>© 2026 FreeCourseHub. All educational material belongs to their respective creators.</p>
+                <p style="font-size: 12px; color: #94a3b8; margin-top: 4px;">
+                    All courses and videos belong to their respective owners. We only organize and share free educational links.
+                </p>
+                <div class="footer-legal-links" style="margin-top: 8px;">
+                    <a href="../sections/about.html">About Us</a> | 
+                    <a href="../sections/privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- YouTube-Style Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="../index.html" class="mobile-nav-item" title="Home">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="../sections/Courses.html" class="mobile-nav-item" title="Courses">
+            <i class="fas fa-book-open"></i>
+        </a>
+        <a href="../sections/Categories.html" class="mobile-nav-item" title="Categories">
+            <i class="fas fa-shapes"></i>
+        </a>
+        <a href="../sections/favorites.html" class="mobile-nav-item" title="Favorites">
+            <i class="fas fa-heart"></i>
+        </a>
+        <button type="button" class="mobile-nav-item" id="mobileMenuTrigger" title="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Slide-Up Menu Drawer & Backdrop Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+        <div class="drawer-handle"></div>
+        <ul class="drawer-links">
+            <li>
+                <a href="../sections/blog.html">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Blog & Roadmaps</span>
+                </a>
+            </li>
+            <li>
+                <a href="../sections/contact.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="../sections/about.html">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="../sections/privacy-policy.html">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+            <li>
+                <button type="button" onclick="toggleTheme(); closeDrawer();">
+                    <i class="fas fa-moon"></i>
+                    <span>Change Theme (Dark/Light)</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Search & Filter Logic
+            const searchInput = document.getElementById('moduleSearch');
+            const cards = document.querySelectorAll('.module-card');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    cards.forEach(card => {
+                        const text = card.textContent.toLowerCase();
+                        card.style.display = text.includes(query) ? '' : 'none';
+                    });
+                });
+            }
+
+            // 2. Progress Calculation Engine
+            const checkboxes = document.querySelectorAll('.topic-list input[type="checkbox"], .project-matrix-grid input[type="checkbox"]');
+            const progressPercent = document.getElementById('progressPercent');
+            const progressBar = document.getElementById('progressBar');
+
+            function recalculateProgress() {
+                const total = checkboxes.length;
+                if (total === 0) return;
+                
+                const checkedCount = document.querySelectorAll('.topic-list input[type="checkbox"]:checked, .project-matrix-grid input[type="checkbox"]:checked').length;
+                const percent = Math.round((checkedCount / total) * 100);
+                
+                if (progressPercent) progressPercent.textContent = `${percent}%`;
+                if (progressBar) progressBar.style.width = `${percent}%`;
+            }
+
+            checkboxes.forEach(box => {
+                box.addEventListener('change', recalculateProgress);
+            });
+
+            // 3. YouTube-Style Scroll Down Hide / Scroll Up Show
+            let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+            const bottomNav = document.getElementById("mobileBottomNav");
+            const backToTopBtn = document.getElementById('backToTop');
+
+            window.addEventListener("scroll", () => {
+                const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Bottom Nav (Mobile)
+                if (window.innerWidth <= 768 && bottomNav) {
+                    if (currentScrollY > lastScrollY && currentScrollY > 70) {
+                        bottomNav.classList.add("nav-hidden");
+                    } else {
+                        bottomNav.classList.remove("nav-hidden");
+                    }
+                }
+
+                // Back to Top Button
+                if (backToTopBtn) {
+                    if (currentScrollY > 400) {
+                        backToTopBtn.classList.add('visible');
+                    } else {
+                        backToTopBtn.classList.remove('visible');
+                    }
+                }
+
+                lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+            }, { passive: true });
+
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // 4. Slide-Up Drawer Handlers
+            const menuTrigger = document.getElementById("mobileMenuTrigger");
+            const menuDrawer = document.getElementById("mobileMenuDrawer");
+            const menuOverlay = document.getElementById("mobileMenuOverlay");
+
+            window.openDrawer = function() {
+                menuDrawer.classList.add("active");
+                menuOverlay.classList.add("active");
+                document.body.style.overflow = "hidden";
+            };
+
+            window.closeDrawer = function() {
+                menuDrawer.classList.remove("active");
+                menuOverlay.classList.remove("active");
+                document.body.style.overflow = "";
+            };
+
+            if (menuTrigger) menuTrigger.addEventListener("click", openDrawer);
+            if (menuOverlay) menuOverlay.addEventListener("click", closeDrawer);
+        });
+
+        // Fallback Theme Switcher
+        if (typeof toggleTheme !== 'function') {
+            window.toggleTheme = function() {
+                document.body.classList.toggle("dark-mode");
+                const isDark = document.body.classList.contains("dark-mode");
+                const icons = document.querySelectorAll(".theme-toggle-btn i, .drawer-links button i");
+                icons.forEach(icon => {
+                    icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
+                });
+            };
+        }
+    </script>
+    <script src="../js_files/theme.js"></script>
+</body>
+</html>

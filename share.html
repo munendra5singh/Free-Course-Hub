@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Explore Free Courses | FreeCourseHub</title>
+    
+    <!-- Meta Search & Indexing -->
+    <meta name="description" content="FreeCourseHub offers free online courses in Web Development, Programming, AI, Data Analytics, and career skills."/>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="author" content="Munendra Singh"/>
+    
+    <!-- Fallback Meta Refresh -->
+    <meta http-equiv="refresh" content="1;url=https://freecoursehub.xyz/"/>
+
+    <link rel="canonical" href="https://freecoursehub.xyz/share.html"/>
+    <link rel="icon" type="image/png" href="https://freecoursehub.xyz/logo.png"/>
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="FreeCourseHub"/>
+    <meta property="og:url" content="https://freecoursehub.xyz/share.html"/>
+    <meta property="og:title" content="Explore Premium Free Courses | FreeCourseHub"/>
+    <meta property="og:description" content="FreeCourseHub offers free online courses in Web Development, Programming, AI, Data Analytics, and career skills."/>
+    <meta property="og:image" content="https://freecoursehub.xyz/preview.png"/>
+    <meta property="og:image:secure_url" content="https://freecoursehub.xyz/preview.png"/>
+    <meta property="og:image:type" content="image/png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Explore Premium Free Courses | FreeCourseHub"/>
+    <meta name="twitter:description" content="FreeCourseHub offers free online courses in Web Development, Programming, AI, Data Analytics, and career skills."/>
+    <meta name="twitter:image" content="https://freecoursehub.xyz/preview.png"/>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "FreeCourseHub",
+      "url": "https://freecoursehub.xyz/"
+    }
+    </script>
+
+    <link rel="stylesheet" href="css_files/style.css"/>
+</head>
+<body class="share-page">
+    <div class="loader-container">
+        <div class="spinner"></div>
+        <p style="font-weight: bold;">Loading Course Preview...</p>
+        <p style="font-size: 12px; color: #6b7280;">Redirecting you to FreeCourseHub</p>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const courseId = params.get('id');
+
+            const targetUrl = courseId 
+                ? "https://freecoursehub.xyz/sections/Courses.html?course=" + encodeURIComponent(courseId)
+                : "https://freecoursehub.xyz/";
+
+            setTimeout(() => {
+                window.location.replace(targetUrl);
+            }, 300);
+        });
+    </script>
+</body>
+</html>
