@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -43,598 +42,355 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body class="portfolio-page">
-<!-- Top Navigation (Desktop standard, Mobile compact) -->
+
+<!-- Top Navigation -->
 <header style="background: none; padding: 0;">
-<nav class="navbar" id="topNavbar">
-<a class="logo" href="../index.html">
-<i class="fas fa-graduation-cap"></i> FreeCourseHub
-            </a>
-<!-- Desktop Links -->
-<ul class="nav-links">
-<li><a href="../index.html">Home</a></li>
-<li><a href="../sections/Courses.html">Courses</a></li>
-<li><a href="../sections/Categories.html">Categories</a></li>
-<li><a href="../sections/blog.html">Blog</a></li>
-<li><a href="../sections/contact.html">Contact</a></li>
-<li><a href="../sections/favorites.html">Favorites ❤️</a></li>
-</ul>
-<div class="nav-right-tools">
-<button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Theme">
-<i class="fas fa-moon"></i>
-</button>
-<a class="nav-btn" href="../sections/Courses.html">Explore</a>
-</div>
-</nav>
+  <nav class="navbar" id="topNavbar">
+    <a class="logo" href="../index.html">
+      <i class="fas fa-graduation-cap"></i> FreeCourseHub
+    </a>
+    <!-- Desktop Links -->
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../sections/Courses.html">Courses</a></li>
+      <li><a href="../sections/Categories.html">Categories</a></li>
+      <li><a href="../sections/blog.html">Blog</a></li>
+      <li><a href="../sections/contact.html">Contact</a></li>
+      <li><a href="../sections/favorites.html">Favorites ❤️</a></li>
+    </ul>
+    <div class="nav-right-tools">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <a class="nav-btn" href="../sections/Courses.html">Explore</a>
+    </div>
+  </nav>
 </header>
-<!-- Modern Hero Section (Dual-Column Card Frame) -->
+
+<!-- Modern Hero Section -->
 <section class="hero-container">
-<div class="hero-card">
-<div class="hero-left-content">
-<h1>My Project Showcases</h1>
-<p>Explore my Web Development platforms, Advanced Excel financial models, automated trackers, and Data Analytics dashboards.</p>
-<div class="hero-actions">
-<a class="hero-pill-btn" href="#portfolioGrid">View All Projects</a>
-</div>
-</div>
-<div class="hero-right-img-box">
-<img alt="Web Development and Data Projects" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&amp;auto=format&amp;fit=crop&amp;q=80"/>
-</div>
-</div>
+  <div class="hero-card">
+    <div class="hero-left-content">
+      <h1>My Project Showcases</h1>
+      <p>Explore my Web Development platforms, Advanced Excel financial models, automated trackers, and Data Analytics dashboards.</p>
+      <div class="hero-actions">
+        <a class="hero-pill-btn" href="#portfolioGrid">View All Projects</a>
+      </div>
+    </div>
+    <div class="hero-right-img-box">
+      <img alt="Web Development and Data Projects" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&amp;auto=format&amp;fit=crop&amp;q=80"/>
+    </div>
+  </div>
 </section>
+
 <!-- Stats Strip -->
 <section class="portfolio-stats-strip">
-<div class="portfolio-mini-box">
-<i class="fas fa-laptop-code"></i>
-<span>Development Tracks</span>
-</div>
-<div class="portfolio-mini-box">
-<i class="fas fa-table"></i>
-<span>Advanced Data Models</span>
-</div>
+  <div class="portfolio-mini-box">
+    <i class="fas fa-laptop-code"></i>
+    <span>Development Tracks</span>
+  </div>
+  <div class="portfolio-mini-box">
+    <i class="fas fa-table"></i>
+    <span>Advanced Data Models</span>
+  </div>
 </section>
+
 <!-- Filter Container -->
 <div class="filter-container">
-<button class="filter-btn active-filter" data-target="all" type="button">All Projects</button>
-<button class="filter-btn" data-target="web" type="button">Web Development</button>
-<button class="filter-btn" data-target="excel" type="button">Advanced Excel</button>
-<button class="filter-btn" data-target="analytics" type="button">Data Analytics</button>
+  <button class="filter-btn active-filter" data-target="all" type="button">All Projects</button>
+  <button class="filter-btn" data-target="web" type="button">Web Development</button>
+  <button class="filter-btn" data-target="excel" type="button">Advanced Excel</button>
+  <button class="filter-btn" data-target="analytics" type="button">Data Analytics</button>
 </div>
-<!-- Work Section -->
+
+<!-- Work Section (Dynamically Populated by projects-engine.js) -->
 <section class="work-section">
-<div class="work-grid" id="portfolioGrid">
-<!-- Project 1: FreeCourseHub -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Web Dev</div>
-<div class="work-img-container">
-<img alt="FreeCourseHub Platform" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&amp;auto=format&amp;fit=crop&amp;q=80'" src="../image/freecoursehub.png"/>
-</div>
-<div class="work-content">
-<h3>FreeCourseHub Platform</h3>
-<p>An educational course curation platform featuring real-time search, interactive favorites bookmarking, and category tracks.</p>
-<div class="tech-tags">
-<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="../index.html">Open Web</a>
-<a class="project-btn view-code" href="../my_projects/details/freecousehubdetail.html">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 2: Money Break Calculator -->
-<div class="work-card" data-category="excel">
-<div class="card-category-badge">Excel</div>
-<div class="work-img-container">
-<img alt="Money Break Cash Counter Spreadsheet" onerror="this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&amp;auto=format&amp;fit=crop&amp;q=80'" src="../image/mony_calculater.png"/>
-</div>
-<div class="work-content">
-<h3>Money Break Calculator</h3>
-<p>Automated Cash Counter &amp; Tracker: An advanced Excel tool for daily cash management, denomination calculation, and currency reconciliation.</p>
-<div class="tech-tags">
-<span class="tag">Excel Formulas</span><span class="tag">Cash Counter</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="../my_projects/money_breck_calculater.xlsx">Open Sheet</a>
-<a class="project-btn view-code" href="../my_projects/details/money_cal.html">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 3: Automotive Industry Insights -->
-<div class="work-card" data-category="analytics">
-<div class="card-category-badge">Analytics</div>
-<div class="work-img-container">
-<img alt="Indian Automotive Industry Trend Visual Analytics Dashboard" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"/>
-</div>
-<div class="work-content">
-<h3>Indian Auto Insights</h3>
-<p>Comprehensive sales data analysis and trend visualization dashboard comparing commercial and passenger vehicle market trends.</p>
-<div class="tech-tags">
-<span class="tag">Data Mining</span><span class="tag">Python</span><span class="tag">Data Analysis</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="#">View Report</a>
-<a class="project-btn view-code" href="#">Dataset</a>
-</div>
-</div>
-</div>
-<!-- Project 4: Attendance Dashboard -->
-<div class="work-card" data-category="excel">
-<div class="card-category-badge">Excel</div>
-<div class="work-img-container">
-<img alt="Student Attendance Management Dashboard" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&amp;auto=format&amp;fit=crop&amp;q=80'" src="../image/att.png"/>
-</div>
-<div class="work-content">
-<h3>Attendance Dashboard</h3>
-<p>Microsoft Excel-based attendance tracking system with automatic percentage calculators and visual status summaries.</p>
-<div class="tech-tags">
-<span class="tag">Macros</span><span class="tag">Formulas</span><span class="tag">Dashboard</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="../my_projects/attendance_sheet.xlsx">Open Sheet</a>
-<a class="project-btn view-code" href="../my_projects/details/attendance.html">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 5: Automated Payroll -->
-<div class="work-card" data-category="excel">
-<div class="card-category-badge">Excel</div>
-<div class="work-img-container">
-<img alt="Automatic Payroll" onerror="this.src='https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&amp;auto=format&amp;fit=crop&amp;q=80'" src="../image/autopayroll.png"/>
-</div>
-<div class="work-content">
-<h3>Automatic Payroll</h3>
-<p>Automated salary calculation system computing allowances, statutory deductions, overtime, and net pay automatically.</p>
-<div class="tech-tags">
-<span class="tag">Excel Formulas</span><span class="tag">Employee Sheet</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="../my_projects/auto_pay_roll.xlsx">Open Sheet</a>
-<a class="project-btn view-code" href="../my_projects/details/autopay_roll.html">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 6: ExcelSuperGuru -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Web Dev</div>
-<div class="work-img-container">
-<img alt="ExcelSuperGuru" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&amp;auto=format&amp;fit=crop&amp;q=80'" src="https://raw.githubusercontent.com/munendra5singh/ExcelSuperGuru/main/assets/images/shareimg.png"/>
-</div>
-<div class="work-content">
-<h3>ExcelSuperGuru</h3>
-<p>Educational portal providing practical Microsoft Excel formula guides, dashboard templates, and productivity tips.</p>
-<div class="tech-tags">
-<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="https://munendra5singh.github.io/ExcelSuperGuru/" rel="noopener" target="_blank">Open Web</a>
-<a class="project-btn view-code" href="#">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 7: Mouse Chaser Survival Game -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Game</div>
-<div class="work-img-container">
-<img alt="Mouse Chaser Survival Game" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&amp;auto=format&amp;fit=crop&amp;q=80'" src="../image/game.png"/>
-</div>
-<div class="work-content">
-<h3>Mouse Chaser Game</h3>
-<p>Interactive web survival game engineered using pure Vanilla JavaScript logic, dynamic collision detection, and score trackers.</p>
-<div class="tech-tags">
-<span class="tag">HTML5 Canvas</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="../my_projects/details/game.html">Play Game</a>
-<a class="project-btn view-code" href="#">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 8: Multi Calculator Hub -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Web Dev</div>
-<div class="work-img-container">
-<img alt="Multi Calculator" onerror="this.src='https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&amp;auto=format&amp;fit=crop&amp;q=80'" src="../image/multical.png"/>
-</div>
-<div class="work-content">
-<h3>Multi Calculator Hub</h3>
-<p>All-in-one calculation suite featuring EMI, GST, date differences, age calculations, and financial planning utilities.</p>
-<div class="tech-tags">
-<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="https://munendra5singh.github.io/MultyCalculatorHub/index.html" rel="noopener" target="_blank">Open Web</a>
-<a class="project-btn view-code" href="#">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 9: Smart AI Calculator -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Web Dev</div>
-<div class="work-img-container">
-<img alt="Smart AI Calculator" src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&amp;auto=format&amp;fit=crop&amp;q=80"/>
-</div>
-<div class="work-content">
-<h3>Smart AI Calculator</h3>
-<p>Modern responsive mathematical engine for multi-variable problem solving and quick financial calculations.</p>
-<div class="tech-tags">
-<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="https://munendra5singh.github.io/smartCalcAi/" rel="noopener" target="_blank">Open Web</a>
-<a class="project-btn view-code" href="#">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 10: Simple Savidhan -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Web Dev</div>
-<div class="work-img-container">
-<img alt="Simple Savidhan" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&amp;auto=format&amp;fit=crop&amp;q=80"/>
-</div>
-<div class="work-content">
-<h3>Simple Savidhan</h3>
-<p>Simplified civic educational website presenting constitutional articles, fundamental rights, and citizen duties in plain language.</p>
-<div class="tech-tags">
-<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="https://munendra5singh.github.io/simple-savidhan/" rel="noopener" target="_blank">Open Web</a>
-<a class="project-btn view-code" href="#">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 11: Semester 5 Course -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Web Dev</div>
-<div class="work-img-container">
-<img alt="Semester 5 Course Digital Book" src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&amp;auto=format&amp;fit=crop&amp;q=80"/>
-</div>
-<div class="work-content">
-<h3>Semester 5 Course Hub</h3>
-<p>Structured academic repository organizing syllabus topics, exam notes, and question banks for undergraduate students.</p>
-<div class="tech-tags">
-<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="https://munendra5singh.github.io/My-digital-book/" rel="noopener" target="_blank">Open Web</a>
-<a class="project-btn view-code" href="#">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 12: My Secure Vault -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Web Dev</div>
-<div class="work-img-container">
-<img alt="My Secure Vault" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&amp;auto=format&amp;fit=crop&amp;q=80"/>
-</div>
-<div class="work-content">
-<h3>My Secure Vault</h3>
-<p>Local browser-based encrypted password and secure credential organizer with custom categorization tools.</p>
-<div class="tech-tags">
-<span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="https://munendra5singh.github.io/My-secure-vault/" rel="noopener" target="_blank">Open Web</a>
-<a class="project-btn view-code" href="#">Details</a>
-</div>
-</div>
-</div>
-<!-- Project 13: Clip Pro -->
-<div class="work-card" data-category="web">
-<div class="card-category-badge">Web Dev</div>
-<div class="work-img-container">
-<img alt="Clip Pro Audio Utility" src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&amp;auto=format&amp;fit=crop&amp;q=80"/>
-</div>
-<div class="work-content">
-<h3>Clip Pro Audio Tool</h3>
-<p>Lightweight web audio recording, playback evaluation, and voice clipping utility with clear UI visualizers.</p>
-<div class="tech-tags">
-<span class="tag">Web Audio API</span><span class="tag">JavaScript</span>
-</div>
-<div class="card-buttons">
-<a class="project-btn view-live" href="https://munendra5singh.github.io/ClipEval-PRO/" rel="noopener" target="_blank">Open Web</a>
-<a class="project-btn view-code" href="#">Details</a>
-</div>
-</div>
-</div>
-</div>
+  <div class="work-grid" id="portfolioGrid">
+    <!-- JS will render all project cards automatically here -->
+  </div>
 </section>
+
 <!-- Education & Credentials Section -->
 <section class="edu-cert-section">
-<h2 class="modern-section-title">Education &amp; Credentials</h2>
-<p class="modern-section-subtitle">A blend of formal academic learning and modern professional tech specializations.</p>
-<div class="edu-cert-grid">
-<div class="edu-cert-card">
-<h3><i class="fas fa-graduation-cap"></i> Formal Education</h3>
-<div class="timeline-item">
-<div class="timeline-year">Pursuing</div>
-<div class="timeline-title">Bachelor of Arts (B.A.)</div>
-<div class="timeline-institute">Hemwati Nandan Bahuguna Garhwal University (HNBGU)</div>
-<div class="timeline-desc">Specializing in core subjects including Economics, Geography, and Political Science with strong foundational understanding.</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-year">Completed</div>
-<div class="timeline-title">Higher Secondary Certificate (12th)</div>
-<div class="timeline-institute">Board Examination</div>
-<div class="timeline-desc">Completed Senior Secondary Education with focused theoretical study models.</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-year">Completed</div>
-<div class="timeline-title">Secondary School Certificate (10th)</div>
-<div class="timeline-institute">Board Examination</div>
-<div class="timeline-desc">Completed high school curriculum with clean analytical performance scores.</div>
-</div>
-</div>
-<div class="edu-cert-card">
-<h3><i class="fas fa-award"></i> Professional Certifications</h3>
-<div class="timeline-item">
-<div class="timeline-year">In Progress</div>
-<div class="timeline-title">Full Stack Web Development</div>
-<div class="timeline-institute">PhysicsWallah (PW) Certified</div>
-<div class="timeline-desc">Intensive training focused on HTML5, CSS3, responsive layouts, modern grid frameworks, and JavaScript architectures.</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-year">In Progress</div>
-<div class="timeline-title">Data Analytics &amp; Management</div>
-<div class="timeline-institute">PhysicsWallah (PW) Certified</div>
-<div class="timeline-desc">Specialized track for handling advanced data sheets, automated trackers, cash management templates, and reporting dashboards.</div>
-</div>
-<div class="timeline-item">
-<div class="timeline-year">Completed</div>
-<div class="timeline-title">Basic &amp; Advanced Computer Course</div>
-<div class="timeline-institute">Certified Technical Training</div>
-<div class="timeline-desc">Mastered core productivity tools including advanced database architectures in Microsoft Excel, layout structuring in Word, and presentation design.</div>
-</div>
-</div>
-</div>
+  <h2 class="modern-section-title">Education &amp; Credentials</h2>
+  <p class="modern-section-subtitle">A blend of formal academic learning and modern professional tech specializations.</p>
+  <div class="edu-cert-grid">
+    <div class="edu-cert-card">
+      <h3><i class="fas fa-graduation-cap"></i> Formal Education</h3>
+      <div class="timeline-item">
+        <div class="timeline-year">Pursuing</div>
+        <div class="timeline-title">Bachelor of Arts (B.A.)</div>
+        <div class="timeline-institute">Hemwati Nandan Bahuguna Garhwal University (HNBGU)</div>
+        <div class="timeline-desc">Specializing in core subjects including Economics, Geography, and Political Science with strong foundational understanding.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Completed</div>
+        <div class="timeline-title">Higher Secondary Certificate (12th)</div>
+        <div class="timeline-institute">Board Examination</div>
+        <div class="timeline-desc">Completed Senior Secondary Education with focused theoretical study models.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Completed</div>
+        <div class="timeline-title">Secondary School Certificate (10th)</div>
+        <div class="timeline-institute">Board Examination</div>
+        <div class="timeline-desc">Completed high school curriculum with clean analytical performance scores.</div>
+      </div>
+    </div>
+    <div class="edu-cert-card">
+      <h3><i class="fas fa-award"></i> Professional Certifications</h3>
+      <div class="timeline-item">
+        <div class="timeline-year">In Progress</div>
+        <div class="timeline-title">Full Stack Web Development</div>
+        <div class="timeline-institute">PhysicsWallah (PW) Certified</div>
+        <div class="timeline-desc">Intensive training focused on HTML5, CSS3, responsive layouts, modern grid frameworks, and JavaScript architectures.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">In Progress</div>
+        <div class="timeline-title">Data Analytics &amp; Management</div>
+        <div class="timeline-institute">PhysicsWallah (PW) Certified</div>
+        <div class="timeline-desc">Specialized track for handling advanced data sheets, automated trackers, cash management templates, and reporting dashboards.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Completed</div>
+        <div class="timeline-title">Basic &amp; Advanced Computer Course</div>
+        <div class="timeline-institute">Certified Technical Training</div>
+        <div class="timeline-desc">Mastered core productivity tools including advanced database architectures in Microsoft Excel, layout structuring in Word, and presentation design.</div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Admin Panel (Protected) -->
 <div id="followersList" style="display: none; margin: 30px auto; padding: 25px; border-radius: 20px; max-width: 900px; background: var(--bg-card); border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
-<h3 style="margin-bottom: 15px; color: var(--text-primary);">Manage Followers</h3>
-<div style="overflow-x: auto;">
-<table id="listDisplay" style="width: 100%; border-collapse: collapse; color: var(--text-primary); font-size: 14px;">
-<thead>
-<tr style="border-bottom: 2px solid var(--brand); text-align: left;">
-<th style="padding: 10px;">Name</th>
-<th style="padding: 10px;">Phone</th>
-<th style="padding: 10px;">Gender</th>
-<th style="padding: 10px;">Action</th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
+  <h3 style="margin-bottom: 15px; color: var(--text-primary);">Manage Followers</h3>
+  <div style="overflow-x: auto;">
+    <table id="listDisplay" style="width: 100%; border-collapse: collapse; color: var(--text-primary); font-size: 14px;">
+      <thead>
+        <tr style="border-bottom: 2px solid var(--brand); text-align: left;">
+          <th style="padding: 10px;">Name</th>
+          <th style="padding: 10px;">Phone</th>
+          <th style="padding: 10px;">Gender</th>
+          <th style="padding: 10px;">Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <button class="hero-pill-btn" onclick="exportToExcel()" style="margin-top: 15px; background: #107c41; color: white; border: none; cursor: pointer;">
+    Export to Excel (.csv)
+  </button>
 </div>
-<button class="hero-pill-btn" onclick="exportToExcel()" style="margin-top: 15px; background: #107c41; color: white; border: none; cursor: pointer;">
-            Export to Excel (.csv)
-        </button>
-</div>
+
 <div style="text-align: center; margin: 20px;">
-<button onclick="showAdminPanel()" style="background:transparent; border:none; color:#94a3b8; font-size:12px; cursor:pointer;">Settings</button>
+  <button onclick="showAdminPanel()" style="background:transparent; border:none; color:#94a3b8; font-size:12px; cursor:pointer;">Settings</button>
 </div>
+
 <!-- Balanced Full Width Footer -->
 <footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-main-grid">
-<!-- Column 1: Brand -->
-<div class="footer-brand-col">
-<a class="footer-logo" href="../index.html">
-<i class="fas fa-graduation-cap"></i> FreeCourseHub
-                    </a>
-<p>Your destination for finding the best verified free online courses and learning paths.</p>
-</div>
-<!-- Column 2: Explore -->
-<div class="footer-nav-col">
-<h4 class="footer-col-title">Explore</h4>
-<ul class="footer-list">
-<li><a href="../index.html">Home</a></li>
-<li><a href="../sections/Courses.html">Courses</a></li>
-<li><a href="../sections/Categories.html">Categories</a></li>
-<li><a href="../sections/blog.html">Blog Articles</a></li>
-</ul>
-</div>
-<!-- Column 3: Support -->
-<div class="footer-nav-col">
-<h4 class="footer-col-title">Support</h4>
-<ul class="footer-list">
-<li><a href="../sections/contact.html">Contact Us</a></li>
-<li><a href="../sections/about.html">About Us</a></li>
-<li><a href="../sections/privacy-policy.html">Privacy Policy</a></li>
-<li><a href="../sections/favorites.html">My Favorites ❤️</a></li>
-</ul>
-</div>
-<!-- Column 4: Connect With Us -->
-<div class="footer-social-col">
-<h4 class="footer-col-title">Connect With Us</h4>
-<div class="footer-social-grid">
-    <a class="social-pill yt" href="https://www.youtube.com/@munendra-tcm" rel="noopener noreferrer" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-    <a class="social-pill gh" href="https://github.com/munendra5singh" rel="noopener noreferrer" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-    <a class="social-pill ig" href="https://www.instagram.com/munendra_tcm?igsh=c3F6aDUxYTVlNmhz" rel="noopener noreferrer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-    <a class="social-pill wa" href="https://wa.me/919105523282" rel="noopener noreferrer" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <a class="social-pill fb" href="https://www.facebook.com/share/1E47B3eucZ/" rel="noopener noreferrer" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a class="social-pill li" href="https://www.linkedin.com/in/munendra-singh-7706443b3/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-</div>
-</div>
-</div>
-<!-- Disclaimer & Copyright -->
-<div class="footer-bottom-disclaimer">
-<p>© 2026 FreeCourseHub. All educational material belongs to their respective creators.</p>
-<p style="font-size: 12px; color: #94a3b8; margin-top: 4px;">
-                    All courses and videos belong to their respective owners. We only organize and share free educational links.
-                </p>
-<div class="footer-legal-links" style="margin-top: 8px;">
-<a href="../sections/about.html">About Us</a> | 
-                    <a href="../sections/privacy-policy.html">Privacy Policy</a>
-</div>
-</div>
-</div>
+  <div class="footer-inner">
+    <div class="footer-main-grid">
+      <!-- Column 1: Brand -->
+      <div class="footer-brand-col">
+        <a class="footer-logo" href="../index.html">
+          <i class="fas fa-graduation-cap"></i> FreeCourseHub
+        </a>
+        <p>Your destination for finding the best verified free online courses and learning paths.</p>
+      </div>
+      <!-- Column 2: Explore -->
+      <div class="footer-nav-col">
+        <h4 class="footer-col-title">Explore</h4>
+        <ul class="footer-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../sections/Courses.html">Courses</a></li>
+          <li><a href="../sections/Categories.html">Categories</a></li>
+          <li><a href="../sections/blog.html">Blog Articles</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: Support -->
+      <div class="footer-nav-col">
+        <h4 class="footer-col-title">Support</h4>
+        <ul class="footer-list">
+          <li><a href="../sections/contact.html">Contact Us</a></li>
+          <li><a href="../sections/about.html">About Us</a></li>
+          <li><a href="../sections/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="../sections/favorites.html">My Favorites ❤️</a></li>
+        </ul>
+      </div>
+      <!-- Column 4: Connect With Us -->
+      <div class="footer-social-col">
+        <h4 class="footer-col-title">Connect With Us</h4>
+        <div class="footer-social-grid">
+          <a class="social-pill yt" href="https://www.youtube.com/@munendra-tcm" rel="noopener noreferrer" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a class="social-pill gh" href="https://github.com/munendra5singh" rel="noopener noreferrer" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a class="social-pill ig" href="https://www.instagram.com/munendra_tcm?igsh=c3F6aDUxYTVlNmhz" rel="noopener noreferrer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="social-pill wa" href="https://wa.me/919105523282" rel="noopener noreferrer" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a class="social-pill fb" href="https://www.facebook.com/share/1E47B3eucZ/" rel="noopener noreferrer" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-pill li" href="https://www.linkedin.com/in/munendra-singh-7706443b3/" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Disclaimer & Copyright -->
+    <div class="footer-bottom-disclaimer">
+      <p>© 2026 FreeCourseHub. All educational material belongs to their respective creators.</p>
+      <p style="font-size: 12px; color: #94a3b8; margin-top: 4px;">
+        All courses and videos belong to their respective owners. We only organize and share free educational links.
+      </p>
+      <div class="footer-legal-links" style="margin-top: 8px;">
+        <a href="../sections/about.html">About Us</a> | 
+        <a href="../sections/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
 </footer>
+
 <!-- YouTube-Style Mobile Bottom Navigation Bar -->
 <nav class="mobile-bottom-nav" id="mobileBottomNav">
-<a class="mobile-nav-item" href="../index.html" title="Home">
-<i class="fas fa-home"></i>
-</a>
-<a class="mobile-nav-item" href="../sections/Courses.html" title="Courses">
-<i class="fas fa-book-open"></i>
-</a>
-<a class="mobile-nav-item" href="../sections/Categories.html" title="Categories">
-<i class="fas fa-shapes"></i>
-</a>
-<a class="mobile-nav-item" href="../sections/favorites.html" title="Favorites">
-<i class="fas fa-heart"></i>
-</a>
-<button class="mobile-nav-item" id="mobileMenuTrigger" title="Menu" type="button">
-<i class="fas fa-bars"></i>
-</button>
+  <a class="mobile-nav-item" href="../index.html" title="Home">
+    <i class="fas fa-home"></i>
+  </a>
+  <a class="mobile-nav-item" href="../sections/Courses.html" title="Courses">
+    <i class="fas fa-book-open"></i>
+  </a>
+  <a class="mobile-nav-item" href="../sections/Categories.html" title="Categories">
+    <i class="fas fa-shapes"></i>
+  </a>
+  <a class="mobile-nav-item" href="../sections/favorites.html" title="Favorites">
+    <i class="fas fa-heart"></i>
+  </a>
+  <button class="mobile-nav-item" id="mobileMenuTrigger" title="Menu" type="button">
+    <i class="fas fa-bars"></i>
+  </button>
 </nav>
+
 <!-- Mobile Slide-Up Menu Drawer & Backdrop Overlay -->
 <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 <div class="mobile-menu-drawer" id="mobileMenuDrawer">
-<div class="drawer-handle"></div>
-<ul class="drawer-links">
-<li>
-<a href="../sections/blog.html">
-<i class="fas fa-newspaper"></i>
-<span>Blog &amp; Roadmaps</span>
-</a>
-</li>
-<li>
-<a href="../sections/contact.html">
-<i class="fas fa-envelope"></i>
-<span>Contact Us</span>
-</a>
-</li>
-<li>
-<a href="../sections/about.html">
-<i class="fas fa-info-circle"></i>
-<span>About Us</span>
-</a>
-</li>
-<li>
-<a href="../sections/privacy-policy.html">
-<i class="fas fa-shield-alt"></i>
-<span>Privacy Policy</span>
-</a>
-</li>
-<li>
-<button onclick="toggleTheme(); closeDrawer();" type="button">
-<i class="fas fa-moon"></i>
-<span>Change Theme (Dark/Light)</span>
-</button>
-</li>
-</ul>
+  <div class="drawer-handle"></div>
+  <ul class="drawer-links">
+    <li>
+      <a href="../sections/blog.html">
+        <i class="fas fa-newspaper"></i>
+        <span>Blog &amp; Roadmaps</span>
+      </a>
+    </li>
+    <li>
+      <a href="../sections/contact.html">
+        <i class="fas fa-envelope"></i>
+        <span>Contact Us</span>
+      </a>
+    </li>
+    <li>
+      <a href="../sections/about.html">
+        <i class="fas fa-info-circle"></i>
+        <span>About Us</span>
+      </a>
+    </li>
+    <li>
+      <a href="../sections/privacy-policy.html">
+        <i class="fas fa-shield-alt"></i>
+        <span>Privacy Policy</span>
+      </a>
+    </li>
+    <li>
+      <button onclick="toggleTheme(); closeDrawer();" type="button">
+        <i class="fas fa-moon"></i>
+        <span>Change Theme (Dark/Light)</span>
+      </button>
+    </li>
+  </ul>
 </div>
-<!-- Scripts -->
+
+<!-- Page UI Utility Scripts -->
 <script>
-        // 1. Automated Portfolio Grid Filters
-        document.addEventListener("DOMContentLoaded", () => {
-            const filterButtons = document.querySelectorAll(".filter-btn");
-            const projectCards = document.querySelectorAll(".work-card");
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. YouTube-Style Scroll Down Hide / Scroll Up Show
+    let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const bottomNav = document.getElementById("mobileBottomNav");
 
-            filterButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    const currentActive = document.querySelector(".active-filter");
-                    if (currentActive) {
-                        currentActive.classList.remove("active-filter");
-                    }
-                    button.classList.add("active-filter");
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth > 768) return;
+      const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 70) {
+        bottomNav.classList.add("nav-hidden");
+      } else {
+        bottomNav.classList.remove("nav-hidden");
+      }
+      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+    }, { passive: true });
 
-                    const targetCategory = button.getAttribute("data-target");
+    // 2. Slide-Up Drawer Handlers
+    const menuTrigger = document.getElementById("mobileMenuTrigger");
+    const menuDrawer = document.getElementById("mobileMenuDrawer");
+    const menuOverlay = document.getElementById("mobileMenuOverlay");
 
-                    projectCards.forEach(card => {
-                        const cardCategory = card.getAttribute("data-category");
-                        if (targetCategory === "all" || cardCategory === targetCategory) {
-                            card.classList.remove("hide");
-                        } else {
-                            card.classList.add("hide");
-                        }
-                    });
-                });
-            });
+    window.openDrawer = function() {
+      menuDrawer.classList.add("active");
+      menuOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    };
 
-            // 2. YouTube-Style Scroll Down Hide / Scroll Up Show
-            let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
-            const bottomNav = document.getElementById("mobileBottomNav");
+    window.closeDrawer = function() {
+      menuDrawer.classList.remove("active");
+      menuOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    };
 
-            window.addEventListener("scroll", () => {
-                if (window.innerWidth > 768) return;
-                const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
-                
-                if (currentScrollY > lastScrollY && currentScrollY > 70) {
-                    bottomNav.classList.add("nav-hidden");
-                } else {
-                    bottomNav.classList.remove("nav-hidden");
-                }
-                lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
-            }, { passive: true });
+    if (menuTrigger) menuTrigger.addEventListener("click", openDrawer);
+    if (menuOverlay) menuOverlay.addEventListener("click", closeDrawer);
+  });
 
-            // 3. Slide-Up Drawer Handlers
-            const menuTrigger = document.getElementById("mobileMenuTrigger");
-            const menuDrawer = document.getElementById("mobileMenuDrawer");
-            const menuOverlay = document.getElementById("mobileMenuOverlay");
+  // 3. Admin Panel Control Engine
+  const ADMIN_PASSWORD = "alpha@52314";
 
-            window.openDrawer = function() {
-                menuDrawer.classList.add("active");
-                menuOverlay.classList.add("active");
-                document.body.style.overflow = "hidden";
-            };
+  window.showAdminPanel = function() {
+    const pass = prompt("Admin Password Enter Karein:");
+    if (pass === ADMIN_PASSWORD) {
+      const followersList = document.getElementById('followersList');
+      if (followersList) followersList.style.display = 'block';
+      window.renderList(); 
+    } else {
+      alert("❌ गलत पासवर्ड!");
+    }
+  }
 
-            window.closeDrawer = function() {
-                menuDrawer.classList.remove("active");
-                menuOverlay.classList.remove("active");
-                document.body.style.overflow = "";
-            };
+  window.renderList = async function() {
+    if (typeof window.renderListFirebase === 'function') {
+      await window.renderListFirebase();
+    }
+  }
 
-            if (menuTrigger) menuTrigger.addEventListener("click", openDrawer);
-            if (menuOverlay) menuOverlay.addEventListener("click", closeDrawer);
-        });
+  window.exportToExcel = async function() {
+    if (typeof window.exportToExcelFirebase === 'function') {
+      await window.exportToExcelFirebase();
+    }
+  }
 
-        // 4. Admin Panel Control Engine
-        const ADMIN_PASSWORD = "alpha@52314";
+  window.removeFollower = async function(index) {
+    if (typeof window.removeFollowerFirebase === 'function') {
+      await window.removeFollowerFirebase(index);
+      if (typeof window.renderListFirebase === 'function') {
+        window.renderListFirebase(); 
+      }
+    }
+  }
 
-        window.showAdminPanel = function() {
-            const pass = prompt("Admin Password Enter Karein:");
-            if (pass === ADMIN_PASSWORD) {
-                const followersList = document.getElementById('followersList');
-                if (followersList) followersList.style.display = 'block';
-                window.renderList(); 
-            } else {
-                alert("❌ गलत पासवर्ड!");
-            }
-        }
+  // 4. Theme Switcher Fallback
+  if (typeof toggleTheme !== 'function') {
+    window.toggleTheme = function() {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      const icons = document.querySelectorAll(".theme-toggle-btn i, .drawer-links button i");
+      icons.forEach(icon => {
+        icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
+      });
+    };
+  }
+</script>
 
-        window.renderList = async function() {
-            if (typeof window.renderListFirebase === 'function') {
-                await window.renderListFirebase();
-            }
-        }
-
-        window.exportToExcel = async function() {
-            if (typeof window.exportToExcelFirebase === 'function') {
-                await window.exportToExcelFirebase();
-            }
-        }
-
-        window.removeFollower = async function(index) {
-            if (typeof window.removeFollowerFirebase === 'function') {
-                await window.removeFollowerFirebase(index);
-                if (typeof window.renderListFirebase === 'function') {
-                    window.renderListFirebase(); 
-                }
-            }
-        }
-
-        // Fallback Theme Switcher
-        if (typeof toggleTheme !== 'function') {
-            window.toggleTheme = function() {
-                document.body.classList.toggle("dark-mode");
-                const isDark = document.body.classList.contains("dark-mode");
-                const icons = document.querySelectorAll(".theme-toggle-btn i, .drawer-links button i");
-                icons.forEach(icon => {
-                    icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
-                });
-            };
-        }
-    </script>
+<!-- Core Scripts -->
 <script src="../js_files/theme.js"></script>
+<script src="../js_files/projects-engine.js"></script>
 <script src="../js_files/firebase-config.js" type="module"></script>
 <script src="../js_files/community.js" type="module"></script>
 </body>
