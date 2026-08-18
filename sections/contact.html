@@ -304,81 +304,185 @@
 <audio id="toastSound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3"></audio>
 <!-- Interactive Scripts & Navigation Logic -->
 <script>
-        function openPopup() {
-            document.getElementById('followPopup').style.display = 'block';
+  const grid = document.getElementById("allCourseGrid");
+  const searchInput = document.getElementById("searchInput");
+
+  function getFavorites() {
+    return JSON.parse(localStorage.getItem("favorites")) || [];
+  }
+
+  function toggleLike(event, courseId) {
+    event.stopPropagation();
+    event.preventDefault();
+    let favorites = getFavorites();
+    const btn = event.currentTarget;
+    const icon = btn.querySelector("i");
+
+    if (favorites.includes(courseId)) {
+      favorites = favorites.filter(id => id !== courseId);
+      btn.classList.remove("liked");
+      icon.className = "far fa-heart";
+    } else {
+      favorites.push(courseId);
+      btn.classList.add("liked");
+      icon.className = "fas fa-heart";
+    }
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }
+
+  // Smart Social & Card Share
+  function shareCourse(event, courseId, courseName) {
+    event.stopPropagation();
+    event.preventDefault();
+
+    const shareUrl = `https://freecoursehub.xyz/share.html?id=${encodeURIComponent(courseId)}`;
+    const shareText = `Explore this verified free course on FreeCourseHub: ${courseName}`;
+
+    if (navigator.share) {
+      navigator.share({
+        title: `${courseName} - FreeCourseHub`,
+        text: shareText,
+        url: shareUrl
+      }).catch(() => {});
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        alert("Course share link copied to clipboard!");
+      }).catch(() => {
+        prompt("Copy this link to share:", shareUrl);
+      });
+    } else {
+      prompt("Copy this link to share:", shareUrl);
+    }
+  }
+
+  // Render Courses Cards
+  function renderAllCourses(filter = "") {
+    if (typeof allCoursesMasterData === 'undefined' || !grid) return;
+    grid.innerHTML = "";
+
+    const favorites = getFavorites();
+    const data = (filter.length > 0)
+      ? allCoursesMasterData.filter(c => c.name.toLowerCase().includes(filter.toLowerCase()))
+      : allCoursesMasterData;
+
+    data.forEach(course => {
+      const desc = course.description || course.desc || "Learn this skill effectively.";
+      const courseIdentifier = course.id || course.name;
+      const isLiked = favorites.includes(courseIdentifier);
+
+      grid.innerHTML += `
+        <div class="course-card" id="${course.id || ''}" data-name="${course.name}" style="transition: all 0.5s ease;">
+          <div class="card-actions-top">
+            <button type="button" class="action-circle-btn share-btn" onclick="shareCourse(event, '${course.id || course.name}', '${course.name.replace(/'/g, "\\'")}')" title="Share Course">
+              <i class="fas fa-share-alt"></i>
+            </button>
+            <button type="button" class="action-circle-btn like-btn ${isLiked ? 'liked' : ''}" onclick="toggleLike(event, '${courseIdentifier}')" title="Save to Favorites">
+              <i class="${isLiked ? 'fas' : 'far'} fa-heart"></i>
+            </button>
+          </div>
+          <img src="${course.img}" alt="${course.name}" loading="lazy">
+          <h3>${course.name}</h3>
+          <p>${desc}</p>
+          <a href="${course.link}" target="_blank" rel="noopener" class="course-btn">View Course</a>
+        </div>
+      `;
+    });
+
+    // Search empty hone par hi direct target course highlight karein
+    if (!filter) {
+      checkAndHighlightTargetCourse();
+    }
+  }
+
+  // URL parameter padhkar card ko RED BORDER aur GLOW se highlight karna
+  function checkAndHighlightTargetCourse() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetCourseId = urlParams.get("course") || urlParams.get("id");
+
+    if (targetCourseId) {
+      setTimeout(() => {
+        const targetElement = document.getElementById(targetCourseId);
+        if (targetElement) {
+          // Screen ke bilkul center me scroll karega
+          targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+
+          // High-Visibility Bold Red Border + Red Glow
+          targetElement.style.transition = "all 0.4s ease-in-out";
+          targetElement.style.border = "5px solid #ef4444"; // 4px Thick Red Border
+          targetElement.style.boxShadow = "0 0 30px rgba(239, 68, 68, 0.6), 0 10px 25px rgba(0, 0, 0, 0.15)";
+          targetElement.style.transform = "scale(1.05)";
+
+          // 4 second baad normal style me restore
+          setTimeout(() => {
+            targetElement.style.border = "";
+            targetElement.style.boxShadow = "";
+            targetElement.style.transform = "";
+          }, 4000);
         }
-        
-        function closePopup() {
-            document.getElementById('followPopup').style.display = 'none';
-        }
+      }, 300);
+    }
+  }
 
-        window.onclick = function(event) {
-            const popup = document.getElementById('followPopup');
-            if (event.target === popup) {
-                popup.style.display = 'none';
-            }
-        };
+  // Search input event listener
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      renderAllCourses(e.target.value);
+    });
+  }
 
-        function toggleGenderText() {
-            const toggle = document.getElementById('genderToggle');
-            const genderText = document.getElementById('genderText');
-            if (toggle.checked) {
-                genderText.innerHTML = "Female 👩‍💼";
-                genderText.className = "gender-text female-mode";
-            } else {
-                genderText.innerHTML = "Male 👨‍💼";
-                genderText.className = "gender-text male-mode";
-            }
-        }
+  // DOM Load Initializer
+  document.addEventListener("DOMContentLoaded", () => {
+    renderAllCourses();
 
-        // YouTube-Style Scroll Down Hide / Scroll Up Show
-        let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
-        const bottomNav = document.getElementById("mobileBottomNav");
+    // 1. Mobile Bottom Bar Scroll Hide/Show
+    let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const bottomNav = document.getElementById("mobileBottomNav");
 
-        window.addEventListener("scroll", () => {
-            if (window.innerWidth > 768) return;
-            const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (currentScrollY > lastScrollY && currentScrollY > 70) {
-                bottomNav.classList.add("nav-hidden");
-            } else {
-                bottomNav.classList.remove("nav-hidden");
-            }
-            lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
-        }, { passive: true });
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth > 768) return;
+      const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 70) {
+        bottomNav.classList.add("nav-hidden");
+      } else {
+        bottomNav.classList.remove("nav-hidden");
+      }
+      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+    }, { passive: true });
 
-        // Slide-Up Drawer Handlers
-        const menuTrigger = document.getElementById("mobileMenuTrigger");
-        const menuDrawer = document.getElementById("mobileMenuDrawer");
-        const menuOverlay = document.getElementById("mobileMenuOverlay");
+    // 2. Slide-Up Drawer Handlers
+    const menuTrigger = document.getElementById("mobileMenuTrigger");
+    const menuDrawer = document.getElementById("mobileMenuDrawer");
+    const menuOverlay = document.getElementById("mobileMenuOverlay");
 
-        window.openDrawer = function() {
-            menuDrawer.classList.add("active");
-            menuOverlay.classList.add("active");
-            document.body.style.overflow = "hidden";
-        };
+    window.openDrawer = function() {
+      menuDrawer.classList.add("active");
+      menuOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    };
 
-        window.closeDrawer = function() {
-            menuDrawer.classList.remove("active");
-            menuOverlay.classList.remove("active");
-            document.body.style.overflow = "";
-        };
+    window.closeDrawer = function() {
+      menuDrawer.classList.remove("active");
+      menuOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    };
 
-        if (menuTrigger) menuTrigger.addEventListener("click", openDrawer);
-        if (menuOverlay) menuOverlay.addEventListener("click", closeDrawer);
+    if (menuTrigger) menuTrigger.addEventListener("click", openDrawer);
+    if (menuOverlay) menuOverlay.addEventListener("click", closeDrawer);
+  });
 
-        // Theme Switcher Fallback
-        if (typeof toggleTheme !== 'function') {
-            window.toggleTheme = function() {
-                document.body.classList.toggle("dark-mode");
-                const isDark = document.body.classList.contains("dark-mode");
-                const icons = document.querySelectorAll(".theme-toggle-btn i, .drawer-links button i");
-                icons.forEach(icon => {
-                    icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
-                });
-            };
-        }
-    </script>
+  // Fallback Theme Switcher
+  if (typeof toggleTheme !== 'function') {
+    window.toggleTheme = function() {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      const icons = document.querySelectorAll(".theme-toggle-btn i, .drawer-links button i");
+      icons.forEach(icon => {
+        icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
+      });
+    };
+  }
+</script>
 <script src="../js_files/theme.js"></script>
 <script src="../js_files/firebase-config.js" type="module"></script>
 <script src="../js_files/community.js" type="module"></script>
