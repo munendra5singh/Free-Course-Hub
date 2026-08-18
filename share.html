@@ -8,8 +8,8 @@
   <!-- Open Graph Meta Tags (Social Media Previews) -->
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="FreeCourseHub"/>
-  <meta property="og:title" content="Explore Free Courses | FreeCourseHub"/>
-  <meta property="og:description" content="Access verified free online courses in Web Dev, AI, Data Analytics, and Excel."/>
+  <meta property="og:title" content="Explore Free Courses & Categories | FreeCourseHub"/>
+  <meta property="og:description" content="Access verified free online courses and learning paths in Web Dev, AI, Data Analytics, and Excel."/>
   <meta property="og:image" content="https://freecoursehub.xyz/preview.png"/>
   
   <!-- Image dimensions for best preview display -->
@@ -18,8 +18,8 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Explore Free Courses | FreeCourseHub"/>
-  <meta name="twitter:description" content="Access verified free online courses in Web Dev, AI, Data Analytics, and Excel."/>
+  <meta name="twitter:title" content="Explore Free Courses & Categories | FreeCourseHub"/>
+  <meta name="twitter:description" content="Access verified free online courses and learning paths in Web Dev, AI, Data Analytics, and Excel."/>
   <meta name="twitter:image" content="https://freecoursehub.xyz/preview.png"/>
 
   <!-- Search Engine exclusion -->
@@ -34,8 +34,8 @@
     <!-- Blue Spinner -->
     <div style="width: 40px; height: 40px; border: 4px solid #e2e8f0; border-top-color: #2563eb; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px;"></div>
     
-    <h3 style="font-weight: 600; font-size: 18px; margin: 0 0 8px; color: #0f172a;">Opening course...</h3>
-    <p style="font-size: 14px; color: #64748b; margin: 0;">Redirecting to FreeCourseHub.</p>
+    <h3 style="font-weight: 600; font-size: 18px; margin: 0 0 8px; color: #0f172a;">Opening Link...</h3>
+    <p style="font-size: 14px; color: #64748b; margin: 0;">Redirecting you to FreeCourseHub.</p>
   </div>
 
   <!-- CSS Animation for Spinner -->
@@ -46,25 +46,28 @@
     }
   </style>
 
-  <!-- Redirection JavaScript Engine -->
+  <!-- Dual Redirection JavaScript Engine (Handles both Courses & Categories) -->
   <script>
     (function() {
-      // Get 'id' or 'course' parameter from the URL
       const params = new URLSearchParams(window.location.search);
       const courseId = params.get('id') || params.get('course');
+      const categoryKey = params.get('cat') || params.get('category');
 
-      // Define default destination
       let destination = "https://freecoursehub.xyz/sections/Courses.html";
-      
-      // If a specific course ID is found, append it to target URL
+
+      // 1. Agar Course ID aayi hai:
       if (courseId) {
-        destination += "?course=" + encodeURIComponent(courseId);
+        destination = "https://freecoursehub.xyz/sections/Courses.html?course=" + encodeURIComponent(courseId);
+      } 
+      // 2. Agar Category Key aayi hai:
+      else if (categoryKey) {
+        destination = "https://freecoursehub.xyz/sections/Categories.html?category=" + encodeURIComponent(categoryKey);
       }
 
-      // Fast redirection without keeping history of this page
+      // Smooth fast redirect
       setTimeout(() => {
         window.location.replace(destination);
-      }, 300); // 300ms delay to ensure smooth transition UX
+      }, 250);
     })();
   </script>
 </body>
