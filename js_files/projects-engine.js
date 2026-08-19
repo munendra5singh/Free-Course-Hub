@@ -233,6 +233,63 @@ const PROJECTS_DATABASE = [
       "Encrypted browser-level local data handling"
     ],
     techStack: "HTML5, CSS3, JavaScript LocalStorage & Web Crypto API"
+  },
+  {
+    id: "tea-shop-web",
+    title: "Chai & Tea Delight",
+    category: "web",
+    categoryBadge: "Web Dev",
+    image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&auto=format&fit=crop&q=80",
+    fallbackImage: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&auto=format&fit=crop&q=80",
+    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+    liveUrl: "https://munendra5singh.github.io/tea-shop/",
+    liveBtnText: "Open Web",
+    whatIsIt: "A modern, responsive e-commerce web showcase designed for a boutique tea and cafe brand.",
+    whatItDoes: "Displays tea menu varieties, ingredient details, special blends, and lets customers place orders or explore cafe offerings seamlessly.",
+    features: [
+      "Interactive tea menu categorized by flavor and brew type",
+      "Fully responsive mobile-friendly modern UI with cart & order inquiry",
+      "Dynamic pricing calculator and direct customer contact integration"
+    ],
+    techStack: "HTML5, CSS3 (Flexbox/Grid), Modern JavaScript (DOM Manipulation)"
+  },
+  {
+    id: "roll-shop-web",
+    title: "The Roll Corner",
+    category: "web",
+    categoryBadge: "Web Dev",
+    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600&auto=format&fit=crop&q=80",
+    fallbackImage: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&auto=format&fit=crop&q=80",
+    tags: ["HTML", "CSS", "JavaScript", "Fast Food"],
+    liveUrl: "https://munendra5singh.github.io/roll-shop/",
+    liveBtnText: "Open Web",
+    whatIsIt: "A vibrant fast-food menu and ordering web application built for street-style rolls, wraps, and quick bites.",
+    whatItDoes: "Showcases different types of veg & non-veg rolls, customizable fillings, special sauces, and enables quick online food discovery.",
+    features: [
+      "Categorized visual menu for Veg, Paneer, Egg, and Chicken rolls",
+      "Interactive add-ons and sauce customization selector",
+      "Instant WhatsApp order integration with automated cart bill summary"
+    ],
+    techStack: "HTML5, CSS3, JavaScript (LocalStorage & Dynamic Cart Logic)"
+  },
+  {
+    id: "dairy-fresh-web",
+    title: "Pure Dairy Hub",
+    category: "web",
+    categoryBadge: "Web Dev",
+    image: "https://images.unsplash.com/photo-1527153857715-3908f2ae5e81?w=600&auto=format&fit=crop&q=80",
+    fallbackImage: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&auto=format&fit=crop&q=80",
+    tags: ["HTML", "CSS", "JavaScript", "E-Commerce"],
+    liveUrl: "https://munendra5singh.github.io/dairy-shop/",
+    liveBtnText: "Open Web",
+    whatIsIt: "A clean and modern dairy farm & retail web platform for ordering farm-fresh milk, paneer, ghee, and organic dairy goods.",
+    whatItDoes: "Highlights product purity, daily subscription plans, quantity-based pricing, and facilitates hassle-free local doorstep delivery booking.",
+    features: [
+      "Product catalog for milk, curd, paneer, butter, and authentic desi ghee",
+      "Daily/Weekly recurring milk subscription selection calculator",
+      "Direct WhatsApp and call-to-order integration for quick local delivery"
+    ],
+    techStack: "HTML5, Modern CSS3, JavaScript (DOM Manipulation & Price Logic)"
   }
 
 ];
