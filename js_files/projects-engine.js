@@ -234,25 +234,7 @@ const PROJECTS_DATABASE = [
     ],
     techStack: "HTML5, CSS3, JavaScript LocalStorage & Web Crypto API"
   },
-  {
-    id: "clip-pro",
-    title: "Clip Pro Audio Tool",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&auto=format&fit=crop&q=80",
-    fallbackImage: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&auto=format&fit=crop&q=80",
-    tags: ["Web Audio API", "JavaScript"],
-    liveUrl: "https://munendra5singh.github.io/ClipEval-PRO/",
-    liveBtnText: "Open Web",
-    whatIsIt: "A browser-based audio recorder, playback inspector, and sound frequency utility.",
-    whatItDoes: "Captures microphone input directly, renders interactive waveform visualizers, and evaluates recording quality.",
-    features: [
-      "Direct microphone recording using Web Audio APIs",
-      "Real-time audio frequency and waveform visualizer",
-      "Instant playback monitoring and clip testing metrics"
-    ],
-    techStack: "HTML5, Web Audio API, JavaScript MediaRecorder"
-  }
+
 ];
 
 /**
