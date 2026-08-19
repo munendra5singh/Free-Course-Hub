@@ -102,194 +102,42 @@ const PROJECTS_DATABASE = [
     techStack: "Microsoft Excel Formulas, Logic Functions (IF, VLOOKUP, XLOOKUP)"
   },
   {
-    id: "excelsuperguru",
-    title: "ExcelSuperGuru",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://raw.githubusercontent.com/munendra5singh/ExcelSuperGuru/main/assets/images/shareimg.png",
+    id: "ms-web-solutions",
+    title: "MS Web Solutions",
+    category: "websites",
+    categoryBadge: "Websites",
+    image: "../image/mswebsolutions.png",
     fallbackImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://munendra5singh.github.io/ExcelSuperGuru/",
-    liveBtnText: "Open Web",
-    whatIsIt: "An educational web guide dedicated to spreadsheet productivity, advanced formulas, and data automation.",
-    whatItDoes: "Provides structured formula documentation, downloadable spreadsheet templates, and practical workflow tutorials.",
+    tags: ["Web Design", "Business Site"],
+    liveUrl: "https://mswebsolutions.online",
+    liveBtnText: "Live Demo",
+    whatIsIt: "A professional business website designed to showcase web development and digital solutions.",
+    whatItDoes: "Provides company service offerings, contact pathways, and responsive business presentations online.",
     features: [
-      "Comprehensive formula reference categorized by skill tier",
-      "Downloadable practice spreadsheets and reference sheets",
-      "Clean, readable interface optimized for study"
+      "Fully responsive modern business layout",
+      "Optimized performance and clean user interface",
+      "Integrated contact and service inquiry sections"
     ],
-    techStack: "HTML5, CSS3 Responsive Grid, Vanilla JavaScript"
+    techStack: "HTML5, CSS3, JavaScript, GitHub Pages"
   },
   {
-    id: "mouse-game",
-    title: "Mouse Chaser Survival Game",
-    category: "web",
-    categoryBadge: "Game",
-    image: "../image/game.png",
-    fallbackImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML5 Canvas", "JavaScript"],
-    liveUrl: "../my_projects/details/game.html",
-    liveBtnText: "Play Game",
-    whatIsIt: "A 2D browser-based arcade survival game built using pure JavaScript and the HTML5 Canvas API.",
-    whatItDoes: "Challenges players to dodge dynamic obstacles using mouse movement while calculating collisions and survival score in real time.",
+    id: "project-hub",
+    title: "Project Hub Dashboard",
+    category: "tools",
+    categoryBadge: "Tools",
+    image: "../image/projecthub.png",
+    fallbackImage: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80",
+    tags: ["Developer Dashboard", "Utility"],
+    liveUrl: "https://munendra5singh.github.io/Project-Hub/",
+    liveBtnText: "Launch Hub",
+    whatIsIt: "A centralized developer dashboard designed to organize, search, and launch web projects and apps.",
+    whatItDoes: "Allows instant filtering, sorting, and switching between grid and list layouts for multiple developer projects.",
     features: [
-      "High-precision real-time coordinate collision detection",
-      "Progressive difficulty acceleration and live scoring",
-      "Lightweight architecture with zero external game engine dependencies"
+      "Instant keyword search and category filtering",
+      "Toggle between Grid and List views",
+      "Dark and light theme aesthetics with quick access navigation"
     ],
-    techStack: "HTML5 Canvas API, Pure JavaScript Engine"
-  },
-  {
-    id: "multicalc-hub",
-    title: "Multi Calculator Hub",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "../image/multical.png",
-    fallbackImage: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://munendra5singh.github.io/MultyCalculatorHub/index.html",
-    liveBtnText: "Open Web",
-    whatIsIt: "A consolidated mathematical utility portal combining essential daily, tax, and personal finance calculators.",
-    whatItDoes: "Computes loan EMI schedules, GST additions/deductions, age timelines, and calendar date differences instantly.",
-    features: [
-      "EMI loan breakdown with interest and principal segregation",
-      "Forward and reverse GST tax calculation tools",
-      "Accurate date interval and age calculation modules"
-    ],
-    techStack: "HTML5, Responsive CSS, JavaScript Mathematical Logic"
-  },
-  {
-    id: "smart-ai-calc",
-    title: "Smart AI Calculator",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&auto=format&fit=crop&q=80",
-    fallbackImage: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://munendra5singh.github.io/smartCalcAi/",
-    liveBtnText: "Open Web",
-    whatIsIt: "A mathematical calculation interface built for rapid expression evaluation and problem-solving.",
-    whatItDoes: "Parses mathematical operations and financial inputs quickly through an adaptive, keypad-driven design.",
-    features: [
-      "Glassmorphism-styled responsive keypad interface",
-      "Real-time expression parsing engine",
-      "Recent calculations history tracking"
-    ],
-    techStack: "HTML5, Modern CSS Variables, JavaScript Math Parser"
-  },
-  {
-    id: "simple-savidhan",
-    title: "Simple Savidhan",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80",
-    fallbackImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://munendra5singh.github.io/simple-savidhan/",
-    liveBtnText: "Open Web",
-    whatIsIt: "A civic awareness web application presenting constitutional articles, fundamental rights, and citizen duties in plain language.",
-    whatItDoes: "Enables users to search and read constitutional clauses through structured, readable summaries.",
-    features: [
-      "Searchable database organized by constitutional articles",
-      "Citizen rights and civic awareness learning tracks",
-      "Minimalist, reading-focused typographic layout"
-    ],
-    techStack: "HTML5, CSS3, JavaScript Dynamic Search"
-  },
-  {
-    id: "semester-5-hub",
-    title: "Semester 5 Course Hub",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&auto=format&fit=crop&q=80",
-    fallbackImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://munendra5singh.github.io/My-digital-book/",
-    liveBtnText: "Open Web",
-    whatIsIt: "An undergraduate digital study portal organizing syllabus outlines, subject notes, and reference materials.",
-    whatItDoes: "Structures academic resources across core subjects like Economics, Geography, and Political Science for fast reference.",
-    features: [
-      "Unit-wise syllabus navigation for multiple subjects",
-      "Exam-focused summaries and key definitions",
-      "Lightweight, fast-loading architecture with local caching"
-    ],
-    techStack: "HTML5, CSS Flexbox & Grid, Client-side Storage"
-  },
-  {
-    id: "secure-vault",
-    title: "My Secure Vault",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&auto=format&fit=crop&q=80",
-    fallbackImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "https://munendra5singh.github.io/My-secure-vault/",
-    liveBtnText: "Open Web",
-    whatIsIt: "A client-side credential manager designed for local data organization without external server requirements.",
-    whatItDoes: "Stores and sorts personal identifiers, access codes, and notes locally in the browser.",
-    features: [
-      "Zero-database, fully client-side storage architecture",
-      "One-click copy and quick category sorting",
-      "Encrypted browser-level local data handling"
-    ],
-    techStack: "HTML5, CSS3, JavaScript LocalStorage & Web Crypto API"
-  },
-  {
-    id: "tea-shop-web",
-    title: "Chai & Tea Delight",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&auto=format&fit=crop&q=80",
-    fallbackImage: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
-    liveUrl: "https://munendra5singh.github.io/tea-shop/",
-    liveBtnText: "Open Web",
-    whatIsIt: "A modern, responsive e-commerce web showcase designed for a boutique tea and cafe brand.",
-    whatItDoes: "Displays tea menu varieties, ingredient details, special blends, and lets customers place orders or explore cafe offerings seamlessly.",
-    features: [
-      "Interactive tea menu categorized by flavor and brew type",
-      "Fully responsive mobile-friendly modern UI with cart & order inquiry",
-      "Dynamic pricing calculator and direct customer contact integration"
-    ],
-    techStack: "HTML5, CSS3 (Flexbox/Grid), Modern JavaScript (DOM Manipulation)"
-  },
-  {
-    id: "roll-shop-web",
-    title: "The Roll Corner",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600&auto=format&fit=crop&q=80",
-    fallbackImage: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript", "Fast Food"],
-    liveUrl: "https://munendra5singh.github.io/roll-shop/",
-    liveBtnText: "Open Web",
-    whatIsIt: "A vibrant fast-food menu and ordering web application built for street-style rolls, wraps, and quick bites.",
-    whatItDoes: "Showcases different types of veg & non-veg rolls, customizable fillings, special sauces, and enables quick online food discovery.",
-    features: [
-      "Categorized visual menu for Veg, Paneer, Egg, and Chicken rolls",
-      "Interactive add-ons and sauce customization selector",
-      "Instant WhatsApp order integration with automated cart bill summary"
-    ],
-    techStack: "HTML5, CSS3, JavaScript (LocalStorage & Dynamic Cart Logic)"
-  },
-  {
-    id: "dairy-fresh-web",
-    title: "Pure Dairy Hub",
-    category: "web",
-    categoryBadge: "Web Dev",
-    image: "https://images.unsplash.com/photo-1527153857715-3908f2ae5e81?w=600&auto=format&fit=crop&q=80",
-    fallbackImage: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=600&auto=format&fit=crop&q=80",
-    tags: ["HTML", "CSS", "JavaScript", "E-Commerce"],
-    liveUrl: "https://munendra5singh.github.io/dairy-shop/",
-    liveBtnText: "Open Web",
-    whatIsIt: "A clean and modern dairy farm & retail web platform for ordering farm-fresh milk, paneer, ghee, and organic dairy goods.",
-    whatItDoes: "Highlights product purity, daily subscription plans, quantity-based pricing, and facilitates hassle-free local doorstep delivery booking.",
-    features: [
-      "Product catalog for milk, curd, paneer, butter, and authentic desi ghee",
-      "Daily/Weekly recurring milk subscription selection calculator",
-      "Direct WhatsApp and call-to-order integration for quick local delivery"
-    ],
-    techStack: "HTML5, Modern CSS3, JavaScript (DOM Manipulation & Price Logic)"
+    techStack: "HTML5, CSS3, Vanilla JavaScript"
   }
 
 ];
