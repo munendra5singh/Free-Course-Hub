@@ -233,7 +233,7 @@ const PROJECTS_DATABASE = [
       "Encrypted browser-level local data handling"
     ],
     techStack: "HTML5, CSS3, JavaScript LocalStorage & Web Crypto API"
-  },
+  }
 
 ];
 
