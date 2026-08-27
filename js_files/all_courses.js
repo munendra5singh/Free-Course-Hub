@@ -110,7 +110,7 @@ const allCoursesMasterData = [
     },
         { 
         id: "course-sql_english", 
-        category: ["Data Analytics",], 
+        category: ["Data Analytics"], 
         name: "SQL ENGLISH", 
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPQk0M2jqjdhDytCf0i5lpeF_6_95Mq1MHIe-lPDCrRQ&s=10", 
         desc: "Build interactive business dashboards and transform data into actionable insights", 
