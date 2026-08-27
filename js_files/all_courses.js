@@ -108,6 +108,14 @@ const allCoursesMasterData = [
         desc: "Build interactive business dashboards and transform data into actionable insights.", 
         link: "https://edu.skillcourse.in/login?returnTo=%2Fdashboard%2Fcourse%2F11" 
     },
+        { 
+        id: "course-sql_english", 
+        category: ["Data Analytics",], 
+        name: "SQL ENGLISH", 
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPQk0M2jqjdhDytCf0i5lpeF_6_95Mq1MHIe-lPDCrRQ&s=10", 
+        desc: "Build interactive business dashboards and transform data into actionable insights", 
+        link: "https://youtube.com/playlist?list=PLNcg_FV9n7qZY_2eAtUzEUulNjTJREhQe&si=5sL7O-WWbIad_80q" 
+    },
 
     // --- 4. DATABASES ---
     { 
