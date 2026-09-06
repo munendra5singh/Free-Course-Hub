@@ -403,18 +403,80 @@
 <script src="../js_files/theme.js"></script>
 
 <script>
+  // Category Configuration with exact category mappings and distinctive keywords
   const categoryConfig = {
-    "web-development": { title: "Web Development Courses", description: "Learn Web Development Completely Free", keys: ["web", "html", "css", "javascript", "react", "frontend", "backend"] },
-    "programming": { title: "Programming Courses", description: "Learn Programming Completely Free", keys: ["program", "python", "java", "c++", "coding", "c language"] },
-    "artificial-intelligence": { title: "Artificial Intelligence Courses", description: "Learn AI Completely Free", keys: ["ai", "artificial", "machine learning", "data science", "prompt"] },
-    "ms-office": { title: "MS Office Courses", description: "Learn MS Office Completely Free", keys: ["office", "excel", "word", "powerpoint"] },
-    "database": { title: "Database Courses", description: "Learn Database Completely Free", keys: ["database", "sql", "mysql", "mongodb", "postgres"] },
-    "communication-skills": { title: "Communication Skills Courses", description: "Improve Communication Skills Completely Free", keys: ["communication", "english", "speaking", "soft skills", "personality"] },
-    "graphic-design": { title: "Graphic Design Courses", description: "Learn Graphic Design Completely Free", keys: ["design", "graphic", "photoshop", "canva", "ui/ux", "figma"] },
-    "data-analytics": { title: "Data Analytics Courses", description: "Learn Data Analytics Completely Free", keys: ["data", "analytics", "power bi", "tableau", "statistics"] },
-    "career": { title: "Career & Growth Courses", description: "Build Career Skills Completely Free", keys: ["career", "interview", "resume", "growth", "job"] },
-    "ba-courses": { title: "B.A Courses", description: "Explore B.A Courses Completely Free", keys: ["ba", "history", "geography", "political", "economics", "hindi"] }
+    "web-development": { 
+      title: "Web Development Courses", 
+      description: "Learn Web Development Completely Free", 
+      exactCategories: ["web-development", "web development", "web dev", "frontend", "backend", "full stack"],
+      keys: ["html", "css", "javascript", "react", "frontend", "backend", "web development"] 
+    },
+    "programming": { 
+      title: "Programming Courses", 
+      description: "Learn Programming Completely Free", 
+      exactCategories: ["programming", "coding", "software engineering"],
+      keys: ["programming", "python", "java", "c++", "coding", "c language", "golang", "dsa"] 
+    },
+    "artificial-intelligence": { 
+      title: "Artificial Intelligence Courses", 
+      description: "Learn AI Completely Free", 
+      exactCategories: ["artificial-intelligence", "artificial intelligence", "ai", "machine learning"],
+      keys: ["artificial intelligence", "machine learning", "deep learning", "prompt engineering", "nlp"] 
+    },
+    "ms-office": { 
+      title: "MS Office Courses", 
+      description: "Learn MS Office Completely Free", 
+      exactCategories: ["ms-office", "ms office", "office"],
+      keys: ["ms office", "excel", "word", "powerpoint", "ms excel", "ms word"] 
+    },
+    "database": { 
+      title: "Database Courses", 
+      description: "Learn Database Completely Free", 
+      exactCategories: ["database", "db", "sql"],
+      keys: ["database", "sql", "mysql", "mongodb", "postgresql", "postgres", "nosql", "sqlite"] 
+    },
+    "communication-skills": { 
+      title: "Communication Skills Courses", 
+      description: "Improve Communication Skills Completely Free", 
+      exactCategories: ["communication-skills", "communication skills", "soft skills"],
+      keys: ["communication", "spoken english", "public speaking", "personality development", "soft skills"] 
+    },
+    "graphic-design": { 
+      title: "Graphic Design Courses", 
+      description: "Learn Graphic Design Completely Free", 
+      exactCategories: ["graphic-design", "graphic design", "design", "ui/ux"],
+      keys: ["graphic design", "photoshop", "canva", "ui/ux", "figma", "illustrator", "video editing"] 
+    },
+    "data-analytics": { 
+      title: "Data Analytics Courses", 
+      description: "Learn Data Analytics Completely Free", 
+      exactCategories: ["data-analytics", "data analytics", "data analysis"],
+      keys: ["data analytics", "power bi", "tableau", "data analysis", "business intelligence"] 
+    },
+    "career": { 
+      title: "Career & Growth Courses", 
+      description: "Build Career Skills Completely Free", 
+      exactCategories: ["career", "career & growth", "growth", "jobs"],
+      keys: ["interview preparation", "resume building", "career growth", "career guidance", "freelancing"] 
+    },
+    "ba-courses": { 
+      title: "B.A Courses", 
+      description: "Explore B.A Courses Completely Free", 
+      exactCategories: ["ba-courses", "ba courses", "b.a courses", "b.a", "ba", "humanities", "arts"],
+      // "ba" को standalone word regex से ही मैच किया जाता है ताकि 'database' कभी मैच न हो
+      keys: ["b.a", "ba degree", "history", "geography", "political science", "sociology", "psychology", "hindi sahitya", "philosophy", "economics"] 
+    }
   };
+
+  // Safe whole-word boundary matcher (prevents "ba" from matching "database" or "backend")
+  function matchesKeywordBoundary(text, keyword) {
+    if (!text || !keyword) return false;
+    const cleanText = text.toLowerCase();
+    const cleanKeyword = keyword.toLowerCase().trim();
+    const escaped = cleanKeyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(^|[^a-zA-Z0-9])${escaped}([^a-zA-Z0-9]|$)`, 'i');
+    return regex.test(cleanText);
+  }
 
   function getFavorites() {
     try {
@@ -552,22 +614,48 @@
 
     grid.innerHTML = "";
     const favorites = getFavorites();
+    const expectedCategories = (categoryObj.exactCategories || []).map(c => c.toLowerCase().trim());
     const searchKeys = categoryObj.keys || [];
 
     const matchedCourses = coursesList.filter(course => {
-      const textPool = [
-        course.name || "",
-        course.description || course.desc || "",
-        Array.isArray(course.category) ? course.category.join(" ") : (course.category || ""),
-        course.tag || ""
-      ].join(" ").toLowerCase();
+      // 1. Check Course Category exact match
+      const rawCategories = Array.isArray(course.category) 
+        ? course.category 
+        : [course.category || ""];
+      
+      const hasDirectCategoryMatch = rawCategories.some(cat => {
+        const cleanCat = String(cat).toLowerCase().trim();
+        return expectedCategories.includes(cleanCat);
+      });
 
-      return searchKeys.some(key => textPool.includes(key));
+      if (hasDirectCategoryMatch) return true;
+
+      // 2. Strict whole-word match on Name / Title / Tag / Category
+      const courseName = String(course.name || "");
+      const courseTag = String(course.tag || "");
+      const categoryString = rawCategories.join(" ");
+
+      const hasNameOrTagMatch = searchKeys.some(key => 
+        matchesKeywordBoundary(courseName, key) || 
+        matchesKeywordBoundary(courseTag, key) ||
+        matchesKeywordBoundary(categoryString, key)
+      );
+
+      return hasNameOrTagMatch;
     });
 
-    const displayList = matchedCourses.length > 0 ? matchedCourses : coursesList.slice(0, 8);
+    if (matchedCourses.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; color: var(--text-muted, #64748b);">
+          <i class="fas fa-folder-open" style="font-size: 40px; margin-bottom: 12px; opacity: 0.5;"></i>
+          <h3>No courses found in this category yet</h3>
+          <p>We are actively adding new courses to this track. Check back soon!</p>
+        </div>
+      `;
+      return;
+    }
 
-    displayList.forEach(course => {
+    matchedCourses.forEach(course => {
       const desc = course.description || course.desc || "Learn this skill effectively.";
       const courseId = course.id || course.name;
       const isLiked = favorites.includes(courseId);
