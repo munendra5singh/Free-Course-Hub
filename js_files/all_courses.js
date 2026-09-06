@@ -221,7 +221,7 @@ const allCoursesMasterData = [
     // --- 6. ACADEMIC & SOCIAL SCIENCES ---
     { 
         id: "course-money-banking", 
-        category: "Economics", 
+        category: "ba", 
         name: "Money & Banking", 
         img: "https://imarticus.org/blog/wp-content/uploads/2024/07/money-and-banking-1200x675.jpg", 
         desc: "Understand monetary systems, commercial banking operations, and financial transactions.", 
@@ -229,7 +229,7 @@ const allCoursesMasterData = [
     },
     { 
         id: "course-geographical-thought", 
-        category: "Geography", 
+        category: "ba", 
         name: "Geographical Thought", 
         img: "https://i0.wp.com/govtcollegetholanur.com/wp-content/uploads/2025/05/geo.jpg", 
         desc: "Study geographic theories, philosophical traditions, and human-environment interactions.", 
