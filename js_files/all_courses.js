@@ -208,6 +208,15 @@ const allCoursesMasterData = [
         desc: "Create modern, ATS-friendly digital resumes that stand out to recruiters.", 
         link: "https://www.youtube.com/watch?v=n7SBzreUYt0" 
     },
+
+        { 
+        id: "course-driving-licence", 
+        category: "Career", 
+        name: "learners Licence,Driving-licence", 
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQst_P8KdAedVeJ2FqmFX3RB3zT-QUx04KD2b0Qf1mMUg&s=10", 
+        desc: "Learner’s & Driving Licence: Apply online easily and get your licence hassle-free.", 
+        link: "https://youtu.be/C-aKG7dnuU8?si=nYX0OebVwlZrpdV" 
+    },
     
     // --- 6. ACADEMIC & SOCIAL SCIENCES ---
     { 
