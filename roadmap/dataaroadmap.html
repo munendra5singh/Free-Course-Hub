@@ -1469,7 +1469,7 @@
                 const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
                 
                 // Bottom Nav (Mobile)
-                if (window.innerWidth <= 768 && bottomNav) {
+                if (window.innerWidth <= 1023 && bottomNav) {
                     if (currentScrollY > lastScrollY && currentScrollY > 70) {
                         bottomNav.classList.add("nav-hidden");
                     } else {
