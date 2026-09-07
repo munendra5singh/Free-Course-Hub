@@ -265,7 +265,7 @@
             const bottomNav = document.getElementById("mobileBottomNav");
 
             window.addEventListener("scroll", () => {
-                if (window.innerWidth > 768) return;
+                if (window.innerWidth > 1023) return;
                 const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
                 
                 if (currentScrollY > lastScrollY && currentScrollY > 70) {
