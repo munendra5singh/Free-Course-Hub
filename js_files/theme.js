@@ -90,14 +90,24 @@ function renderCourses(containerId, filterCategory = null) {
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
+    const bottomNav = document.getElementById('mobileBottomNav');
+    const currentScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
     
-    const currentScroll = window.scrollY || window.pageYOffset; 
-    
-    if (Math.abs(currentScroll - lastScroll) > 30) {
-        navbar.style.top = (currentScroll > lastScroll && currentScroll > 100) ? `-${navbar.offsetHeight}px` : "0";
-        lastScroll = currentScroll;
+    if (currentScroll <= 0) {
+        if (navbar) navbar.style.top = "0";
+        if (bottomNav) bottomNav.classList.remove("nav-hidden");
+        lastScroll = 0;
+        return;
     }
+    
+    if (currentScroll > lastScroll && currentScroll > 70) {
+        if (navbar) navbar.style.top = `-${navbar.offsetHeight}px`;
+        if (bottomNav) bottomNav.classList.add("nav-hidden");
+    } else if (currentScroll < lastScroll) {
+        if (navbar) navbar.style.top = "0";
+        if (bottomNav) bottomNav.classList.remove("nav-hidden");
+    }
+    lastScroll = currentScroll;
 }, { passive: true });
 
 // सहायक फंक्शन: सुनिश्चित करता है कि इमेजेस लोड हो चुकी हैं ताकि स्क्रॉल पोजीशन न बिगड़े
