@@ -1,10 +1,3 @@
-/* ==========================================================================
-   FREE COURSE HUB — MASTER STYLESHEET
-   --------------------------------------------------------------------------
-   All page CSS is maintained here. Page-specific rules are scoped to the
-   page body class so moving CSS into one file does not cause cross-page
-   selector collisions. Keep new styles inside the correct page section.
-   ========================================================================== */
 
 /* ==========================================================================
    SECTION 1 — GLOBAL FOUNDATION / SHARED TOKENS
@@ -89,7 +82,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .home-page .logo{
@@ -933,9 +926,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           10. MOBILE VIEW: 2 CARDS PER ROW & YOUTUBE BOTTOM NAV (<=768px)
+           10. RESPONSIVE NAVBAR & YOUTUBE BOTTOM NAV (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .home-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -949,7 +942,12 @@ html { scroll-behavior: smooth; }
 
             .home-page .logo{ font-size: 18px; }
             .home-page .nav-links, .home-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           11. MOBILE VIEW: 2 CARDS PER ROW & CONTENT (<=768px)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .home-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -1107,7 +1105,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .home-page .mobile-bottom-nav{
                 display: flex;
@@ -1332,7 +1332,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .courses-page .logo{
@@ -1887,9 +1887,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           8. MOBILE VIEW (Image Top, 2 Cards / Row, YouTube Nav)
+           8. RESPONSIVE NAVBAR (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .courses-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -1903,7 +1903,12 @@ html { scroll-behavior: smooth; }
 
             .courses-page .logo{ font-size: 18px; }
             .courses-page .nav-links, .courses-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           8b. MOBILE VIEW (Image Top, 2 Cards / Row) (<=768px)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .courses-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -2037,7 +2042,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .courses-page .mobile-bottom-nav{
                 display: flex;
@@ -2229,7 +2236,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .privacy-page .logo{
@@ -2640,9 +2647,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           7. MOBILE VIEW (<=768px: Stacked & Responsive)
+           7. RESPONSIVE NAVBAR (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .privacy-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -2656,7 +2663,12 @@ html { scroll-behavior: smooth; }
 
             .privacy-page .logo{ font-size: 18px; }
             .privacy-page .nav-links, .privacy-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           7b. MOBILE VIEW (<=768px: Stacked & Responsive)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .privacy-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -2747,7 +2759,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .privacy-page .mobile-bottom-nav{
                 display: flex;
@@ -2939,7 +2953,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .contact-page .logo{
@@ -3796,9 +3810,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           11. MOBILE VIEW (Image Top, 2 Cards/Row, YouTube Bottom Nav)
+           11. RESPONSIVE NAVBAR (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .contact-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -3812,7 +3826,12 @@ html { scroll-behavior: smooth; }
 
             .contact-page .logo{ font-size: 18px; }
             .contact-page .nav-links, .contact-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           11b. MOBILE VIEW (Image Top, 2 Cards/Row) (<=768px)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .contact-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -3949,7 +3968,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .contact-page .mobile-bottom-nav{
                 display: flex;
@@ -4141,7 +4162,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .favorites-page .logo{
@@ -4624,9 +4645,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           7. MOBILE VIEW (<=768px: 2 Cards / Row, YouTube Nav)
+           7. RESPONSIVE NAVBAR (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .favorites-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -4640,7 +4661,12 @@ html { scroll-behavior: smooth; }
 
             .favorites-page .logo{ font-size: 18px; }
             .favorites-page .nav-links, .favorites-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           7b. MOBILE VIEW (<=768px: 2 Cards / Row)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .favorites-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -4774,7 +4800,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .favorites-page .mobile-bottom-nav{
                 display: flex;
@@ -4966,7 +4994,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .about-page .logo{
@@ -5419,9 +5447,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           7. MOBILE VIEW (<=768px: Stacked & Responsive)
+           7. RESPONSIVE NAVBAR (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .about-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -5435,7 +5463,12 @@ html { scroll-behavior: smooth; }
 
             .about-page .logo{ font-size: 18px; }
             .about-page .nav-links, .about-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           7b. MOBILE VIEW (<=768px: Stacked & Responsive)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .about-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -5566,7 +5599,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .about-page .mobile-bottom-nav{
                 display: flex;
@@ -5758,7 +5793,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .blog-page .logo{
@@ -6477,9 +6512,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           8. MOBILE VIEW: 2 CARDS PER ROW & YOUTUBE BOTTOM NAV (<=768px)
+           8. RESPONSIVE NAVBAR (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .blog-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -6493,7 +6528,12 @@ html { scroll-behavior: smooth; }
 
             .blog-page .logo{ font-size: 18px; }
             .blog-page .nav-links, .blog-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           8b. MOBILE VIEW: 2 CARDS PER ROW (<=768px)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .blog-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -6638,7 +6678,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .blog-page .mobile-bottom-nav{
                 display: flex;
@@ -6830,7 +6872,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .categories-page .logo{
@@ -7444,9 +7486,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           8. MOBILE VIEW: 2 CARDS PER ROW & YOUTUBE BOTTOM NAV (<=768px)
+           8. RESPONSIVE NAVBAR (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .categories-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -7460,7 +7502,12 @@ html { scroll-behavior: smooth; }
 
             .categories-page .logo{ font-size: 18px; }
             .categories-page .nav-links, .categories-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           8b. MOBILE VIEW: 2 CARDS PER ROW (<=768px)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .categories-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -7626,7 +7673,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .categories-page .mobile-bottom-nav{
                 display: flex;
@@ -8485,7 +8534,7 @@ html { scroll-behavior: smooth; }
             padding: 0 8%;
             box-shadow: var(--shadow-sm);
             z-index: 1000;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: top 0.3s ease, background 0.3s ease, border-color 0.3s ease;
         }
 
         .portfolio-page .logo{
@@ -9148,9 +9197,9 @@ html { scroll-behavior: smooth; }
         }
 
         /* ==========================================================================
-           8. MOBILE VIEW (<=768px: 2 Cards / Row, YouTube Nav)
+           8. RESPONSIVE NAVBAR (<=1023.98px)
            ========================================================================== */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1023.98px) {
             .portfolio-page{
                 padding-top: 55px !important;
                 padding-bottom: 75px !important;
@@ -9164,7 +9213,12 @@ html { scroll-behavior: smooth; }
 
             .portfolio-page .logo{ font-size: 18px; }
             .portfolio-page .nav-links, .portfolio-page .nav-btn{ display: none !important; }
+        }
 
+        /* ==========================================================================
+           8b. MOBILE VIEW (<=768px: 2 Cards / Row)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
             .portfolio-page .hero-container{
                 width: 94%;
                 margin: 15px auto 10px;
@@ -9343,7 +9397,9 @@ html { scroll-behavior: smooth; }
                 justify-content: center;
                 grid-template-columns: repeat(6, 42px) !important;
             }
+        }
 
+        @media screen and (max-width: 1023.98px) {
             /* --- YOUTUBE BOTTOM NAVIGATION --- */
             .portfolio-page .mobile-bottom-nav{
                 display: flex;
