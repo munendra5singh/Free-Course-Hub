@@ -400,7 +400,7 @@
         let lastScrollY = window.scrollY;
 
         window.addEventListener("scroll", () => {
-            if (window.innerWidth > 768) return;
+            if (window.innerWidth > 1023) return;
             const currentScrollY = window.scrollY;
             
             if (currentScrollY > lastScrollY && currentScrollY > 70) {
