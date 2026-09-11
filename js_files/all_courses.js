@@ -227,12 +227,20 @@ const allCoursesMasterData = [
         desc: "Understand monetary systems, commercial banking operations, and financial transactions.", 
         link: "https://youtube.com/playlist?list=PL-fORSyPTUELSJbl0YEsrvQjkoUqVeeXJ&si=vd7Ulwvv-Ce8hfr3" 
     },
+{ 
+    id: "course-economic-geography", 
+    category: "ba", 
+    name: "Economic Geography", 
+    img: "https://i0.wp.com/govtcollegetholanur.com/wp-content/uploads/2025/05/geo.jpg", 
+    desc: "Explore global economic activities, resource distribution, agricultural patterns, and industrial development.", 
+    link: "https://youtube.com/playlist?list=PL5YWEqSxi0Dj8zmok3HihK7WEusSPGhUO&si=u9ATl2XoveE6gFmF" 
+},
     { 
-        id: "course-geographical-thought", 
-        category: "ba", 
-        name: "Geographical Thought", 
-        img: "https://i0.wp.com/govtcollegetholanur.com/wp-content/uploads/2025/05/geo.jpg", 
-        desc: "Study geographic theories, philosophical traditions, and human-environment interactions.", 
-        link: "https://youtube.com/playlist?list=PL5YWEqSxi0Dj8zmok3HihK7WEusSPGhUO&si=u9ATl2XoveE6gFmF" 
-    }
+    id: "course-economic-development-policy-india", 
+    category: "ba", 
+    name: "Economic Development and Policy in India", 
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRklSOPCu3_Sjb4EWuU1Sn7-pSHR5yv6-MZD9unsuY_Og&s=10", 
+    desc: "Study India's economic policies, planning strategies, development models, and sector reforms.", 
+    link: "https://youtube.com/playlist?list=PLqNlo8Q2X5G1dDfRQd8XKGUb-DETrYoo9&si=KR0jMFlzshjuSAXS" 
+}
 ];
